@@ -71,7 +71,7 @@ Now let's start to make it a little more dynamic. To do this, we'll need to add 
 
 ## Declaring State
 
-To declare state in our component, add a method named `data` inside the object defined in the `<script>` tag. There are many special properties and method we can add to this object--`data` is one that we use when we're declaring a component's state. The data method should always return an object. The properties of that object are whatever you need to put in your component state. Update your `<script>` tag to include the following
+To declare state in our component, add a method named `data` inside the object defined in the `<script>` tag. The data method should always return an object. The properties of that object are whatever you need to put in your component state. Update your `<script>` tag to include the following
 
 ```js
 export default {
