@@ -27,4 +27,4 @@ If you want a more in depth look at how Vue is different from React, you can rea
 - Conform to Vue best practices as outlined by the Official Style Guide
 - Build a portfolio by deploying all applications
 
-### Excited yet? [Let's dive in...](/chapters/SESSION_1.md)
+### Excited yet? [Let's dive in...](./chapters/SESSION_1.md)
