@@ -5,10 +5,11 @@
 > **Learning Objectives**: By the end of this chapter you should know how to
 >
 > - Create a single file component
-> - Declare state in a component
-> - Dynamically render component state in a template
+> - Declare state in a component using `data`
+> - Dynamically render text in a template
 > - Define a method on a component and call it from the template
 > - Conditionally render parts of your template
+> - Dynamically bind to HTML attributes`
 
 Let's start out by playing with some of the Vue syntax inside of [CodeSandbox](https://codesandbox.io/s). At the `Create Sandbox` prompt, select the Vue option. The created vue app is similar to a brand new project created with Create-React-App.
 
@@ -83,9 +84,9 @@ export default {
 };
 ```
 
-## Template Binding
+## Template Syntax: Text Interpolation
 
-Our component now knows about a `name` property. We can render that property in our template using a set of double curly brackets.
+Our component now knows about a `name` property. We can render that property in our template using a set of double curly brackets. This is called **text interpolation**
 
 ```html
 <template>
@@ -145,4 +146,82 @@ You're probably used to using ternary statements in your React code in order to 
     </div>
   </div>
 </template>
+```
+
+Want to show something else if that condition is not true? No problem. There is also a `v-else` directive.
+
+```html
+<template>
+  <div>
+    <h1>{{ greeting }}</h1>
+    <button @click="increaseExcitement">More Excitement</button>
+    <div v-if="greeting.endsWith('!!!')">
+      <p>Ok, we're sufficiently excited!</p>
+    </div>
+    <div v-else>
+      <p>We're starting to get a little excited...</p>
+    </div>
+  </div>
+</template>
+```
+
+If you have more than 2 conditions there is also a `v-else-if` directive that you can read about in the [vue docs](https://vuejs.org/v2/guide/conditional.html)
+
+## Template Syntax: Attribute Binding
+
+We saw how we can dynamically render text in our template. Now let's look at how we can bind to HTML attributes like an image's `src` for example. Let's create an image that will change once our users have reached sufficient excitement levels. Let's start by adding another property on our component's `data`
+
+```js
+export default {
+  data() {
+    return {
+      greeting: "Hello, Vue Developer",
+      imageSrc: "https://media.giphy.com/media/wsXVAJY8ibkqBSmjEF/giphy.gif",
+    };
+  },
+  methods: {
+    increaseExcitement() {
+      this.greeting += "!";
+    },
+  },
+};
+```
+
+Now it's time to create an `<img>` tag and bind that string to it's `src` attribute.
+
+```html
+<template>
+  <div>
+    <h1>{{ greeting }}</h1>
+    <button @click="increaseExcitement">More Excitement</button>
+    <div v-if="greeting.endsWith('!!!')">
+      <p>Ok, we're sufficiently excited!</p>
+    </div>
+    <div v-else>
+      <p>We're starting to get excited...</p>
+    </div>
+    <img :src="imageSrc" alt="Excitement Image" />
+  </div>
+</template>
+```
+
+Notice that the syntax here is different than when we did text interpolation earlier. Instead of double curly brackets, we take the attribute that we want to bind to (in this case our `src` attribute) and we put a colon `:` in front of it. Once you do that, Vue will evaluate any JavaScript expression inside the quotes. Let's look at a more verbose example and bind to the `alt` attribute on the image
+
+```html
+<img
+  :src="imageSrc"
+  :alt="greeting.endsWith('!!!') ? 'Excitement' : 'Anticipation'"
+/>
+```
+
+Now let's see what happens when we programmatically change the value of `imageSrc`. Let's update the `increaseExcitement` method to check for 3 exclamation marks and conditionally update `imageSrc`
+
+```js
+increaseExcitement() {
+  this.greeting += "!";
+
+  if (this.greeting.endsWith("!!!")) {
+    this.imageSrc = "https://media.giphy.com/media/2alKkyRFPKRSU/giphy.gif";
+  }
+}
 ```
