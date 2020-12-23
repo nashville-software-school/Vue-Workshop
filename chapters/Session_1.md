@@ -230,3 +230,7 @@ increaseExcitement() {
   }
 }
 ```
+
+# Practice
+
+[Framework Picker]('./Session_1E.md')
