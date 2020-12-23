@@ -14,7 +14,7 @@
 > - Dynamically render text in a template
 > - Define a method on a component and call it from the template
 > - Conditionally render parts of your template
-> - Dynamically bind to HTML attributes`
+> - Dynamically bind to HTML attributes
 
 Let's start out by playing with some of the Vue syntax inside of [CodeSandbox](https://codesandbox.io/s). At the `Create Sandbox` prompt, select the Vue option. The created vue app is similar to a brand new project created with Create-React-App.
 
