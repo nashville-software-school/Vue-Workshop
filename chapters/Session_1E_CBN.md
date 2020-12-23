@@ -6,7 +6,7 @@ Build a component that prompts the user to select their favorite JavaScript fram
 
 Give them 3 buttons to click: Angular, Vue, and React. When they click a button, a short message should appear along with the logo of the selected framework
 
-![](../images/Intro_to_Vue_Components.gif)
+![](../images/Framework_Picker.gif)
 
 > **Toolbox**: For this project you should use
 >
