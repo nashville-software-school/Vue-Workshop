@@ -1,5 +1,10 @@
 ![Vue Logo](../images/banner.jpg)
 
+[![](https://img.shields.io/badge/component-data-green?logo=vue.js)](https://vuejs.org/v2/guide/instance.html#Data-and-Methods)
+[![](https://img.shields.io/badge/component-text_interpolation-green?logo=vue.js)](https://vuejs.org/v2/guide/syntax.html#Text)
+[![](https://img.shields.io/badge/component-v--if-green?logo=vue.js)](https://vuejs.org/v2/guide/conditional.html)
+[![](https://img.shields.io/badge/component-attribute_binding-green?logo=vue.js)](https://vuejs.org/v2/guide/syntax.html#Attributes)
+
 # Getting Started
 
 > **Learning Objectives**: By the end of this chapter you should know how to
