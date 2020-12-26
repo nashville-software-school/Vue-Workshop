@@ -20,8 +20,8 @@ In this chapter we're going to use multiple components to make a simple ToDo app
 > - Render lists using `v-for`
 > - Pass data to child components via `props`
 > - $emit custom events to parent components
-> - Define computed properties on a component
 > - Use class binding to conditionally add CSS to an HTML element
+> - Define computed properties on a component
 
 ## Use the CLI to create a project
 
