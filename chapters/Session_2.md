@@ -12,6 +12,8 @@
 
 # Much ToDo About Vue
 
+In this chapter we're going to use multiple components to make a simple ToDo application.
+
 > **Learning Objectives**: By the end of this chapter you should know how to
 >
 > - Use multiple components
@@ -67,11 +69,11 @@ export default {};
 <style></style>
 ```
 
-Now update the script section to import the array of items from `data.js` and store a copy of it in the component's `data`
+We want this component to hold the list of all the todo items. Update the script section to import the array of items from `data.js` and store a copy of it in the component's `data`
 
 ```vue
 <script>
-import { todoItems } from "../data/todos";
+import { todoItems } from "../data";
 
 export default {
   data() {
@@ -145,7 +147,7 @@ We want to be able to use this new component from our `TodoList` so let's take t
 
 ```vue
 <script>
-import { todoItems } from "../data/todos";
+import { todoItems } from "../data";
 import TodoItem from "./TodoItem.vue";
 
 export default {
@@ -175,3 +177,149 @@ Now in our template we can loop over every item and render a `TodoItem` componen
 You should now see 3 separate `TodoItem` components rendered--one for every item in the list.
 
 If you're coming from a React background, the `key` attribute should feel familiar. If you're looping over an array in a template, Vue will want you to provide a unique key for each item so it can efficiently track the elements.
+
+## Passing props to child components
+
+The `TodoList` component needs to tell each `TodoItem` component about the data it should render. This is possible through the use of props. These are used just like HTML attributes in our template. Here's how we can modify our `v-for` loop to pass a todo item to the `ToDoItem` component
+
+```html
+<div v-for="item in todos" :key="item.id">
+  <todo-item :todo="item" />
+</div>
+```
+
+This is just like setting any other HTML attribute. Remember though that when we want to bind an attributes to an object or JavaScript expression we need to prefix it with a colon `:`
+
+## Accepting props in a child component
+
+Now we need to make it so the `TodoItem` component knows to expect an object to be passed to it by the name of `todo`. In the `TodoItem` component, update the script to the following
+
+```vue
+<script>
+export default {
+  props: ["todo"],
+};
+</script>
+```
+
+> Note: We won't be prop-typing in this course however it's not uncommon to specify the type of each prop. If you'd like to look at the syntax for doing this, you can see it [here in the docs](https://vuejs.org/v2/guide/components-props.html#Prop-Types)
+
+And here is how we can use the value of the `todo` prop that gets passed in. Update the `TodoItem` template to the following
+
+```html
+<template>
+  <div>
+    <h2>{{ todo.name }}</h2>
+  </div>
+</template>
+```
+
+Our props are bound to the component, so we can use them in the same way we use anything in our `data` object.
+
+## Scoped styling
+
+We should add a little bit of styling so we can clearly see each todo item. Inside the `TodoItem` style tag add a border and some margin to the surrounding `<div>` element
+
+```vue
+<style>
+div {
+  border: 3px solid tomato;
+  margin: 15px;
+  padding: 10px;
+}
+</style>
+```
+
+Whoa! That looks a little crazy... We can see that our styling is affecting every `<div>` element on the page. You might be saying to yourself that we should add a class to the element and target that in our CSS, and you'd have a very valid point; but this is also an opportunity to look at Vue's _scoped_ styling.
+
+Update your `<style>` tag to include a `scoped` attribute and watch the difference
+
+```html
+<style scoped>
+```
+
+Now all the CSS we put in this file only affects this component.
+
+## Emitting events
+
+Let's add a button on each item for the user to mark a todo as completed.
+
+```html
+<template>
+  <div>
+    <h2>{{ todo.name }}</h2>
+    <button>Mark Completed</button>
+  </div>
+</template>
+```
+
+When the user clicks the button we want to have the `TodoItem` component alert to the `TodoList` component so that it can update the list. When child component want to alert parent components that an event has taken place, the child component can _emit_ that event.
+
+Update the `TodoItem` component to include a method named
+`handleClick`. This method will emit an event to let the parent know that a todo item should be updated.
+
+```vue
+<script>
+export default {
+  props: ["todo"],
+
+  methods: {
+    handleClick() {
+      this.$emit("status-change", this.todo);
+    },
+  },
+};
+</script>
+```
+
+Now update the template to call `handleClick` when the button is clicked.
+
+```html
+<template>
+  <div>
+    <h2>{{ todo.name }}</h2>
+    <button @click="handleClick">Mark Completed</button>
+  </div>
+</template>
+```
+
+When `handleClick` gets called, it will create a custom event called `status-change`. The parent component can now listen to for this event in the same way it would listen for a click or onChange event.
+
+Update the `TodoList` template to listen for the new status change event.
+
+```html
+<todo-item :todo="item" @status-change="handleStatusChange" />
+```
+
+Now we need to define our `handleStatusChange` method and decide what should happen when this event is received. Update the component to include the following
+
+```js
+methods: {
+  handleStatusChange(item) {
+    item.completed = !item.completed;
+    console.log(item);
+  },
+}
+```
+
+If you open your console and click the buttons we can see that the todo object is getting updated on each click
+
+## Class binding
+
+Currently there's no visual representation of an item's completion status, so let's update `TodoItem` so that the todo name has a ~~linethrough~~ when it's completed.
+
+Start by defining a CSS class in the style that will add that effect.
+
+```css
+.completed {
+  text-decoration: line-through;
+}
+```
+
+What we want now is to conditionally add this CSS class to the `<h2>` element if the item is complete. We can do that with Vue's class binding
+
+```html
+<h2 :class="{ completed: todo.complete }">{{ todo.name }}</h2>
+```
+
+The syntax here involves passing in an object to the `class` attribute. If the value of a property is `true`, the property name will get added as a class to the element. In the case above for example, if `todo.complete` evaluates to `true` then `completed` will be added as a class to the `h2`. Try clicking the buttons and watch the `completed` class get added a removed from the header as the complete status changes.
