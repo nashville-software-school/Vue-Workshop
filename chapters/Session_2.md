@@ -306,7 +306,7 @@ If you open your console and click the buttons we can see that the todo object i
 
 ## Class binding
 
-Currently there's no visual representation of an item's completion status, so let's update `TodoItem` so that the todo name has a ~~linethrough~~ when it's completed.
+Currently there's no visual representation of an item's completion status, so let's update `TodoItem` so that the todo name has a ~~line through~~ when it's completed.
 
 Start by defining a CSS class in the style that will add that effect.
 
