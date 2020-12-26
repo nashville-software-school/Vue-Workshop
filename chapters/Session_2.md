@@ -323,3 +323,79 @@ What we want now is to conditionally add this CSS class to the `<h2>` element if
 ```
 
 The syntax here involves passing in an object to the `class` attribute. If the value of a property is `true`, the property name will get added as a class to the element. In the case above for example, if `todo.complete` evaluates to `true` then `completed` will be added as a class to the `h2`. Try clicking the buttons and watch the `completed` class get added a removed from the header as the complete status changes.
+
+## Computed properties
+
+Let's add a subheader above the list of items that will keep count of how many items are remaining. It should start off by saying
+
+`There are 3 items left to do today`
+
+and it should update every time an item gets changed.
+
+Because we can put full JavaScript expressions in our template, we technically could do something like this
+
+(Don't actually add this...)
+
+```html
+<h5>
+  There are {{ todos.filter((t) => !t.complete).length }} items left to do today
+</h5>
+```
+
+But our goal should always be to keep logic **out** of the template. The beauty of Vue is separation of concerns, and logic like this belongs in our `<script>`. We _could_ make a method that implements that logic and call that from the template, but the better option is to use something called **computed properties**
+
+Update the `TodoList` component to add a section for `computed`
+
+```js
+export default {
+  components: { TodoItem },
+  data() {
+    return {
+      todos: [...todoItems],
+    };
+  },
+  methods: {
+    handleStatusChange(item) {
+      item.complete = !item.complete;
+      console.log(item);
+    },
+  },
+  computed: {},
+};
+```
+
+We can start to define our computed properties inside this object. Let's add one called `itemsRemaining`
+
+```js
+computed: {
+  itemsRemaining() {
+    return this.todos.filter((t) => !t.complete);
+  },
+},
+```
+
+Even though we define it here as a function, we don't have to invoke it in our template. We simply use `itemsRemaining` as a property
+
+```html
+<h5>There are {{ itemsRemaining.length }} items left to do today</h5>
+```
+
+The incredible part about these computed properties is that Vue will automatically recognize the dependencies of each computed property (in this case it's our `todos` array), and it will know to only re-evaluate the computed property again when any of the dependencies change.
+
+Finally let's add a computed property on our `TodoItem` component so that the on the button switches between "Mark Completed" and "Mark Incomplete" depending on the state of the item.
+
+Add the following code in `TodoItem.vue` below the `methods`
+
+```js
+computed: {
+  buttonText() {
+    return this.todo.complete ? "Mark Incomplete" : "Mark Complete";
+  },
+}
+```
+
+Now use the computed property in the template
+
+```html
+<button @click="handleClick">{{ buttonText }}</button>
+```
