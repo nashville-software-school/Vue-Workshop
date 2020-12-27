@@ -9,7 +9,6 @@
 [![](https://img.shields.io/badge/component-v--for-green?logo=vue.js)](https://vuejs.org/v2/guide/list.html)
 [![](https://img.shields.io/badge/component-props-green?logo=vue.js)](https://vuejs.org/v2/guide/components-props.html)
 [![](https://img.shields.io/badge/component-$emit_custom_events-green?logo=vue.js)](https://vuejs.org/v2/guide/components-custom-events.html)
-[![](https://img.shields.io/badge/component-computed_properties-green?logo=vue.js)](https://vuejs.org/v2/guide/computed.html)
 
 # Vue Phonebook
 
@@ -273,26 +272,182 @@ export default {
 <style></style>
 ```
 
-By inspecting the Vue devtools we can confirm that the new contact is indeed getting added to the array. Now it'd be nice if the form reset after submission.
-
-## Resetting the form using refs
-
-We have a couple options for resetting the form. The first would be to manually change all the property values of `this.form` back to null. Since we have two-way binding, the input fields would automatically empty out. This option is a little verbose though, and doesn't scale very well. If we wanted to add more inputs to our form we'd have to remember to null those values out as well.
-
-If the `handleSubmit` method had access to the actual DOM element for the `<form>` it could use the `reset` method which clears out all inputs. You might think to do something like `document.querySelector('form')` as a way to get a hold of that element, however when working with Vue (or most frontend frameworks for that matter), we don't want to use the `document` object ourselves.
-
-Vue provides us with an attribute called `ref` which we can add to any HTML element and this is how we can access the underlying DOM node. Here is how we can use it on the form
-
-```html
-<v-form @submit.prevent="handleSubmit" ref="contactForm"></v-form>
-```
-
-You can give the ref any name you want, and then in your methods you can reference it like this
+By inspecting the Vue devtools we can confirm that the new contact is indeed getting added to the array. Now it'd be nice if the form reset after submission. Since we have two-way binding, all we have to do in the `ContactForm` component is set the properties on the `form` object back to null and the input controls will automatically empty out.
 
 ```js
 handleSubmit() {
   this.$emit("contact-submit", this.form);
-  // this.$refs.contactForm is the form DOM element
-  this.$refs.contactForm.reset();
+  this.form = {
+    firstName: null,
+    lastName: null,
+    phone: null,
+    type: null,
+    email: null
+  }
 }
 ```
+
+## Displaying the contacts
+
+Next we'll build out a simple table to display contacts in the phonebook. Create a new file in the `components` directory and name it `ContactsTable.vue`. It will rely on the parent component to pass it an array of contacts via props.
+
+```vue
+<template>
+  <div class="mb-5">
+    <h3 class="teal--text">Contacts</h3>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["contacts"],
+};
+</script>
+
+<style></style>
+```
+
+Now import and use this new component in `Phonebook.vue`
+
+```vue
+<template>
+  <div>
+    <contacts-table :contacts="contacts" />
+    <contact-form @contact-submit="addContact" />
+  </div>
+</template>
+
+<script>
+import ContactForm from "./ContactForm.vue";
+import ContactsTable from "./ContactsTable.vue";
+
+export default {
+  components: { ContactForm, ContactsTable },
+  data() {
+    return {
+      contacts: [],
+    };
+  },
+  methods: {
+    addContact(newContact) {
+      this.contacts.push(newContact);
+    },
+  },
+};
+</script>
+
+<style></style>
+```
+
+Back in `ContactsTable.vue` let's stub out a simple table using Vuetify's `<v-simple-table>` component. For starters, lets add the column headers. We'll iterate over the array of contacts in the next step
+
+```html
+<template>
+  <div class="mb-5">
+    <h3 class="teal--text">Contacts</h3>
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Type</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- TODO: Loop over contacts and display row for each -->
+        </tbody>
+      </template>
+    </v-simple-table>
+  </div>
+</template>
+```
+
+The basic layout of the table should be visible on the screen. Inside the table body we can now begin to iterate of the contacts that get received as props using `v-for`. We currently don't have a unique ID on contacts, so we'll use the `phone` property as our key. Add the following code to the table body
+
+```html
+<tbody>
+  <tr v-for="contact in contacts" :key="contact.phone">
+    <td>{{ contact.firstName }} {{ contact.lastName }}</td>
+    <td>{{ contact.phone }}</td>
+    <td>{{ contact.type }}</td>
+    <td>{{ contact.email }}</td>
+  </tr>
+</tbody>
+```
+
+## Persist data in local storage
+
+We currently lose all our contacts every time the page reloads so let's fix that. In the `Phonebook` component, every time a new contact gets added let's save the array in local storage
+
+```js
+addContact(newContact) {
+  this.contacts.push(newContact);
+
+  localStorage.setItem("contacts", JSON.stringify(this.contacts));
+}
+```
+
+If we add a new contact now and inspect local storage, we can confirm that the contact gets persisted. Now we have to handle getting the array _out_ of local storage when the page first loads.
+
+## Utilizing lifecycle methods
+
+What we need is a way to call a method immediately after our `Phonebook` component gets rendered. In that method we'll be able to get our list out of localStorage and set it in our component's `data`.
+
+Vue allows you to hook into certain events of a component's lifecycle. The most commonly used ones we'll see in this course are `mounted` and `beforeDestroy`
+
+- **mounted** - This method will be called immediately after a vue component has been created and mounted to the DOM. The component has already run it's first render by the time this method is called
+
+- **beforeDestroy** - This method is called right before a component is destroyed and leaves the DOM. If your component does something like call `setInterval`, this lifecycle hook is a good opportunity to clear the interval.
+
+If you'd like to see the other lifecycle events you can hook into, take a look at [the docs](https://vuejs.org/v2/guide/instance.html#Instance-Lifecycle-Hooks)
+
+Update the `Phonebook` component to use the `mounted` method and get the contacts out of local storage
+
+```js
+export default {
+  components: { ContactForm, ContactsTable },
+  data() {
+    return {
+      contacts: [],
+    };
+  },
+  mounted() {
+    const existingContacts = JSON.parse(localStorage.getItem("contacts"));
+    this.contacts = existingContacts;
+  },
+  methods: {
+    addContact(newContact) {
+      this.contacts.push(newContact);
+
+      localStorage.setItem("contacts", JSON.stringify(this.contacts));
+    },
+  },
+};
+```
+
+We can now safely refresh the browser and still see all our contacts!
+
+## Cleaning up the layout
+
+Let's take a quick moment to organize the layout in the `Phonebook` so we don't have giant form fields. We can utilize the excellent grid system in Vuetify to create a better responsive layout.
+
+```html
+<template>
+  <div>
+    <v-row>
+      <v-col :lg="8" :sm="12">
+        <contacts-table :contacts="contacts" />
+      </v-col>
+      <v-col :lg="4" :sm="12">
+        <contact-form @contact-submit="addContact" />
+      </v-col>
+    </v-row>
+  </div>
+</template>
+```
+
+## Form Validation
+
+TODO
