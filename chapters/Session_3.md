@@ -18,6 +18,7 @@ In this chapter we'll take a look at forms and build a phonebook application
 >
 > - Utilize a component library
 > - Use `v-model` to bind to form controls such as text inputs and select elements
+> - Use the `mounted` lifecycle hook to call a method when a component enters the DOM
 > - Add form validation to create a solid user experience
 
 ## Project setup
@@ -99,11 +100,11 @@ export default {
   data() {
     return {
       form: {
-        firstName: null,
-        lastName: null,
-        phone: null,
-        type: null,
-        email: null,
+        firstName: "",
+        lastName: "",
+        phone: "",
+        type: "",
+        email: "",
       },
     };
   },
@@ -159,7 +160,7 @@ Let's add more form fields for the rest of the fields, but let's skip `type` for
 <v-form>
   <v-text-field outlined label="First Name" v-model="form.firstName" />
   <v-text-field outlined label="Last Name" v-model="form.lastName" />
-  <v-text-field outlined label="Phone" v-model="form.phone" />
+  <v-text-field type="number" outlined label="Phone" v-model="form.phone" />
   <!-- TODO: phone type -->
   <v-text-field outlined label="Email" v-model="form.email" />
 </v-form>
@@ -173,11 +174,11 @@ The Vuetify `<v-select>` component wants us to pass it an array of items as a pr
 data() {
   return {
     form: {
-      firstName: null,
-      lastName: null,
-      phone: null,
-      type: null,
-      email: null
+      firstName: "",
+      lastName: "",
+      phone: "",
+      type: "",
+      email: ""
     },
     phoneTypeOptions: ["Home", "Cell", "Office"]
   };
@@ -272,17 +273,17 @@ export default {
 <style></style>
 ```
 
-By inspecting the Vue devtools we can confirm that the new contact is indeed getting added to the array. Now it'd be nice if the form reset after submission. Since we have two-way binding, all we have to do in the `ContactForm` component is set the properties on the `form` object back to null and the input controls will automatically empty out.
+By inspecting the Vue devtools we can confirm that the new contact is indeed getting added to the array. Now it'd be nice if the form reset after submission. Since we have two-way binding, all we have to do in the `ContactForm` component is set the properties on the `form` object back to empty strings and the input controls will automatically empty out.
 
 ```js
 handleSubmit() {
   this.$emit("contact-submit", this.form);
   this.form = {
-    firstName: null,
-    lastName: null,
-    phone: null,
-    type: null,
-    email: null
+    firstName: "",
+    lastName: "",
+    phone: "",
+    type: "",
+    email: ""
   }
 }
 ```
@@ -415,7 +416,7 @@ export default {
   },
   mounted() {
     const existingContacts = JSON.parse(localStorage.getItem("contacts"));
-    this.contacts = existingContacts;
+    this.contacts = existingContacts || [];
   },
   methods: {
     addContact(newContact) {
@@ -450,4 +451,85 @@ Let's take a quick moment to organize the layout in the `Phonebook` so we don't 
 
 ## Form Validation
 
-TODO
+> **NOTE**: Form validation can be tricky, and to help out with that problem, there are a few popular libraries that Vue developers like to lean on. The Vuetify input components have a built in validation so that's what we'll be using for this project but if you'd like to explore some other popular options, give these two packages a look
+>
+> - [Vuelidate](https://vuelidate.js.org/)
+> - [VeeValidate](https://vee-validate.logaretm.com/v3)
+
+Let's keep the data in our phonebook clean and add some validation rules to our contact form. We'll use Vuetify to accomplish this.
+
+Vuetify input components accept a prop named `rules`. If we pass that prop an array of validator functions, Vuetify will run each of those functions every time the input value changes and check it validity.
+
+Inside `ContactForm.vue` update the component's `data` to include a property named validators. Start with just a couple simple validators to check whether the **firstName** value exists and is less than 25 characters.
+
+```js
+data() {
+  return {
+    form: {
+      firstName: "",
+      lastName: "",
+      phone: "",
+      type: "",
+      email: ""
+    },
+    phoneTypeOptions: ["Home", "Cell", "Office"],
+    validators: {
+      firstName: [
+        val => !!val || "Contact first name is required",
+        val => val.length < 25 || "First name must be less than 25 characters"
+      ]
+    }
+  };
+},
+```
+
+Now that we have our validator functions for the **firstName** field we can hook these up to the text field in the template.
+
+```html
+<v-text-field
+  outlined
+  label="First Name"
+  v-model="form.firstName"
+  :rules="validators.firstName"
+/>
+```
+
+Add validation rules for the **lastName**, **phone** and **email** fields as well. Last name should not be required, but it should be less than 25 characters. Phone should be required and exactly 10 numbers. Email is not required but should include an `@` symbol.
+
+> **NOTE**: Better validation rules for a phone numbers and email address would include complex regular expressions. If you're feeling adventurous give that a try
+
+## Prevent submit when the form is invalid
+
+When the `handleSubmit` function is called, we should first check if the form is valid. To do this, we need a **reference** to the form component inside the function. Fortunately Vue makes this easy. If we simply add a `ref` attribute on the form component and give it a name like this
+
+```html
+<v-form @submit.prevent="handleSubmit" ref="contactForm"></v-form>
+```
+
+we can reference it in our component functions with code that looks like this
+
+```js
+this.$refs.contactForm;
+```
+
+If you haven't already, add the `ref` attribute to the form. Now update the `handleSubmit` method to use the form reference and validate it. If the form is invalid, exit the function. If it is valid, remember to reset the validation after submit (otherwise you'll see validation errors on the screen after the form empties out).
+
+```js
+handleSubmit() {
+  const isValid = this.$refs.contactForm.validate();
+  if (!isValid) {
+    // Form is not valid. Exit the method
+    return;
+  }
+
+  this.$emit("contact-submit", this.form);
+  this.form = {
+    firstName: "",
+    lastName: "",
+    phone: "",
+    type: "",
+    email: ""
+  };
+  this.$refs.contactForm.resetValidation();
+}
+```
