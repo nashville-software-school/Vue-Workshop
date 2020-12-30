@@ -13,7 +13,7 @@ At some point you're likely to end up with lots of components with duplicate com
 
 Back in our Movie Vuer application we had two components that displayed dates--the Movie Details and the Reviews. It'd be nice if we took the time to format them into something more readable, and if we defined a `formatDate` method in our components we're destined to repeat the same code in both places. We'll instead create a mixin that both components can use
 
-## Defining our Mixin
+## Defining our mixin
 
 In the Movie Vuer project create a `mixins` folder inside the `src` directory. Inside `mixins` add a file named `movieMixins.js`. Inside we'll define a reusable method for formatting dates using the JavaScript `Intl.DateTimeFormat` class
 
@@ -29,7 +29,11 @@ export const dateMixin = {
 };
 ```
 
-Nothing Vue specific here--we're just defining a JavaScript object with a `methods` property on it. Let's see how we can consume this from our Vue components. Start by going into `MovieDetails.vue`, importing the `dateMixin` object, and declare it as a mixin
+Nothing Vue specific here--we're just defining a JavaScript object with a `methods` property on it.
+
+## Using the mixin
+
+Let's see how we can consume this from our Vue components. Start by going into `MovieDetails.vue`, importing the `dateMixin` object, and declare it as a mixin
 
 ```js
 import { mapState } from "vuex";
