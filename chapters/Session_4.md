@@ -91,7 +91,7 @@ Lets make a component to display our search results and add it to the app. Make 
 
 ```vue
 <template>
-  <div>
+  <div v-if="searchTerm">
     <h3>
       Found {{ searchResults.total_results }} results for "{{ searchTerm }}"
     </h3>
@@ -146,7 +146,7 @@ Go back to the `SearchResults` component to add some styling. We can use Vuetify
 
 ```html
 <template>
-  <v-sheet elevation="1" class="mx-auto" max-width="1000">
+  <v-sheet v-if="searchTerm" elevation="1" class="mx-auto" max-width="1000">
     <h3 class="pl-5 mt-5">
       Found {{ searchResults.total_results }} results for "{{ searchTerm }}"
     </h3>
@@ -605,4 +605,17 @@ And in our `v-for` loop we can instead use `viewableMovies`
 
 ```
 <v-slide-item v-for="movie in viewableMovies" :key="movie.id">
+```
+
+## Delete the fake data
+
+Before deploying be sure to delete the dummy data. You can set the initial state of the Vuex store to these defaults
+
+```js
+state: {
+  searchTerm: "",
+  searchResults: [],
+  movieDetails: null,
+  reviews: []
+}
 ```
