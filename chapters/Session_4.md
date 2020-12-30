@@ -2,7 +2,6 @@
 
 \*\* TODO: Prerequisites: Destructuring, MovieDB API, async/await, env variables
 
-[![](https://img.shields.io/badge/component-lifecycle_methods-green?logo=vue.js)](https://vuejs.org/v2/api/#Options-Lifecycle-Hooks)
 [![](https://img.shields.io/badge/component-text_interpolation-green?logo=vue.js)](https://vuejs.org/v2/guide/syntax.html#Text)
 [![](https://img.shields.io/badge/component-v--for-green?logo=vue.js)](https://vuejs.org/v2/guide/list.html)
 [![](https://img.shields.io/badge/Vuex-state-yellow?logo=vue.js)](https://vuex.vuejs.org/guide/state.html)
@@ -10,7 +9,7 @@
 [![](https://img.shields.io/badge/Vuex-actions-yellow?logo=vue.js)](https://vuex.vuejs.org/guide/actions.html)
 [![](https://img.shields.io/badge/Vuex-getters-yellow?logo=vue.js)](https://vuex.vuejs.org/guide/getters.html)
 
-# Event Dashboard
+# Movie Vuer
 
 In this chapter we're going to look at another way to manage state in our application. We'll explore a state management pattern called **Vuex** while we build a movie searching app. Users of the app will be able to search for movies by title and see a list of matches. Clicking a movie in the search results will display details about the selected movie along with reviews.
 
