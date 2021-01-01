@@ -2,12 +2,14 @@
 
 [![](https://img.shields.io/badge/component-mixins-green?logo=vue.js)](https://vuejs.org/v2/guide/mixins.html)
 
+# DRY up code with Mixins
+
+In this chapter we're going to look at Vue mixins as a way to create reusable parts of components
+
 > **Learning Objectives**: By the end of this chapter you should be able to
 >
 > - Know when to use a mixin for your components
 > - Know how to define and use a mixin
-
-# Dry up code with Mixins
 
 At some point you're likely to end up with lots of components with duplicate computed properties or methods. This can come up a lot with things like formatting dates or currency, concatenating names, etc. Vue offers a **mixin** feature which allows us to define any part of a component (data, computed properties, methods, lifecycle hooks) in one place and then easily add it in wherever we need it.
 
