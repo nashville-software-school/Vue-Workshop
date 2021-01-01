@@ -563,7 +563,7 @@ Try running the app and clicking one of the memes. You should be taken to the de
 To fill out the details page we once again need to check firebase as soon as the component mounts. We want to grab just the meme whose ID is in the URL. We can access that in our component via
 
 ```js
-this.$router.currentRoute.params.memeId;
+this.$route.params.memeId;
 ```
 
 The `memeId` property on the `params` object is named according to what we specified back in the `router/index.js` file.
@@ -581,7 +581,7 @@ export default {
   },
 
   async mounted() {
-    const memeId = this.$router.currentRoute.params.memeId;
+    const memeId = this.$route.params.memeId;
     const snapshot = await db.collection("memes").doc(memeId).get();
     this.meme = snapshot.data();
   },
