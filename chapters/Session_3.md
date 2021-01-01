@@ -12,7 +12,9 @@
 
 # Vue Phonebook
 
-In this chapter we'll take a look at forms and build a phonebook application
+In this chapter we'll take a look at forms and build a phonebook application.
+
+A demo of the application we'll be building can be seen [here](https://nss-vue-phonebook.web.app/)
 
 > **Learning Objectives**: By the end of this chapter you should know how to
 >

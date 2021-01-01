@@ -13,7 +13,7 @@
 
 In this chapter we're going to look at another way to manage state in our application. We'll explore a state management pattern called **Vuex** while we build a movie searching app. Users of the app will be able to search for movies by title and see a list of matches. Clicking a movie in the search results will display details about the selected movie along with reviews.
 
-A demo of this application can be see [here](https://nss-vue-movie-vuer.web.app)
+A demo of this application can be seen [here](https://nss-vue-movie-vuer.web.app)
 
 > **Learning Objectives**: By the end of this chapter you should be able to
 >

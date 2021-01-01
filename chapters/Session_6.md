@@ -14,6 +14,8 @@ In this chapter we're going to use the Vue Router to create an SPA with multiple
 - A public feed of all shared memes
 - A "Details" page which just shows a single meme
 
+A demo of this application can been seen [here](https://nss-vue-meme-forum.web.app/)
+
 > **Learning Objectives**: By the end of this chapter you should be able to
 >
 > - Define multiple routes in an application
@@ -600,3 +602,7 @@ Now that the component has access to the meme object, we can use it in the templ
   </div>
 </template>
 ```
+
+## Wrapping up
+
+You're all set with an awesome meme generator app! We didn't add anything to the homepage so feel free to add a nice welcome message there (maybe in an Impact font) and a good image
