@@ -124,12 +124,12 @@ We've got one last step before we can start navigating the different pages in ou
 
 ## Specify where our route components should go with `<router-view>`
 
-Go into `App.js` and empty out everything in the `<app-bar>` component and remove the `<HelloWorld>` component from the template. While you're at it, since this is an app for Vue specific memes, let's change the app bar color to dark green. Your `App` component should now look like this
+Go into `App.js` and empty out everything in the `<app-bar>` component and remove the `<HelloWorld>` component from the template. While you're at it, since this is an app for Vue specific memes, let's change the app bar color to either dark green or teal. Your `App` component should now look like this
 
 ```vue
 <template>
   <v-app>
-    <v-app-bar app color="green darken-2" dark> </v-app-bar>
+    <v-app-bar app color="teal darken-2" dark> </v-app-bar>
 
     <v-main> </v-main>
   </v-app>
@@ -155,7 +155,7 @@ Now run the application and try changing the URL to each of the routes we specif
 Let's add some links to our top navbar. Instead of using `<a>` tags for our links, we use a `<router-link>` component. Add a `h1` and these two links to the navbar. Warning: the color is a bit harsh! We'll style this in a bit...
 
 ```html
-<v-app-bar app color="green darken-2" dark>
+<v-app-bar app color="teal darken-2" dark>
   <h1>Vue Meme Forum</h1>
   <v-spacer></v-spacer>
   <router-link to="/create"> Create </router-link>

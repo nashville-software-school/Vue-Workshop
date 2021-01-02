@@ -148,7 +148,7 @@ If you like, give the template a little Vuetify love
         <form @submit.prevent="addSearch">
           <v-text-field
             prepend-inner-icon="mdi-magnify"
-            color="green darken-2"
+            color="teal darken-2"
             rounded
             outlined
             v-model="inputVal"
