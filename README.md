@@ -6,7 +6,7 @@ Welcome to the Vue.js workshop! In this course we're going to explore all the bu
 
 ## Who is this course for?
 
-This course is designed for novice JavaScript developers. It is perfect for an NSS alum who is interested in learning more about front end development. It assumes you have a background in React as it will occasionally comparisons along the way to React features. If you liked React during your time at NSS, we think you'll 💚💚💚 Vue.
+This course is designed for novice JavaScript developers. It is perfect for an NSS alum who is interested in learning more about front end development. It assumes you have a background in React as it will occasionally make comparisons along the way to React features. If you liked React during your time at NSS, we think you'll 💚💚💚 Vue.
 
 It assumes you are familiar with building applications with components, and are comfortable with managing state throughout a component tree. Familiarity with modern JavaScript features will be helpful, but not necessary. If there is a class where we will employ a ES2015 feature, there will be a video covering it for you to watch beforehand. That way all our class time can be spent focusing on Vue.
 
