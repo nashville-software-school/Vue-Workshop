@@ -386,7 +386,7 @@ Update the template to add a Vuetify alert tag if `errorMessage` exists.
         <h5>{{ errorMessage }}</h5>
       </v-alert>
       <h1>WELCOME</h1>
-      <img :src="require('../assets/logo.png')" />
+      <img :src="require('@/assets/logo.png')" />
       <h1>VUE MEMES ONLY</h1>
     </div>
   </v-container>
