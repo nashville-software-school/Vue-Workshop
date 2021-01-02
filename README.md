@@ -27,4 +27,16 @@ If you want a more in depth look at how Vue is different from React, you can rea
 - Conform to Vue best practices as outlined by the Official Style Guide
 - Build a portfolio by deploying all applications
 
+## Table of Contents
+
+1. [Chapter 1: Component Basics](/chapters/Session_1.md)
+1. [Chapter 2: Props & Events](/chapters/Session_2.md)
+1. [Chapter 3: Forms & Input Binding](/chapters/Session_3.md)
+1. [Chapter 4: State Management & Vuex](/chapters/Session_4.md)
+1. [Chapter 5: Mixins](/chapters/Session_5.md)
+1. [Chapter 6: Vue Router](/chapters/Session_6.md)
+1. [Chapter 7: Query Params](/chapters/Session_7.md)
+1. [Chapter 7: Navigation Guards](/chapters/Session_8.md)
+1. [Chapter 7: Optimization & Lazy Loading](/chapters/Session_9.md)
+
 ### Excited yet? [Let's dive in...](./chapters/Session_1.md)
