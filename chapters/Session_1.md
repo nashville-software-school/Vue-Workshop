@@ -37,11 +37,11 @@ new Vue({
 
 ### App.vue
 
-This `App.vue` component is top of our component tree. Looking at the boilerplate code we get our first look into the structure of a Vue component.
+This `App.vue` component is the top of our component tree. Looking at the boilerplate code we get our first look into the structure of a Vue component.
 
 This is an example of what Vue calls a Single File Component (SFC). The beauty here is that components have a separation of concerns. The file is split up into 3 distinct sections
 
-- **template** - Where we define the html of our component
+- **template** - Where we define the html content of our component
 - **script** - Where we define the state and behavior of our component
 - **style** - Where we define the styling of our components. By default, styling is done in CSS, however it can very easily be set up to use SCSS, LESS, or Stylus if that's your preference
 
