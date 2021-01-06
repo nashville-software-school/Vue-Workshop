@@ -648,3 +648,7 @@ state: {
   reviews: []
 }
 ```
+
+# Deployment
+
+[Deploy to firebase](./Firebase_Deployment.md)

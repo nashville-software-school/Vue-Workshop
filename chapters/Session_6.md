@@ -628,3 +628,7 @@ Now that the component has access to the meme object, we can use it in the templ
 ## Wrapping up
 
 You're all set with an awesome meme generator app! We didn't add anything to the homepage so feel free to add a nice welcome message there (maybe in an Impact font) and a good image
+
+# Deployment
+
+[Deploy to firebase](./Firebase_Deployment.md)

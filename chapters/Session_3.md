@@ -578,3 +578,7 @@ handleSubmit() {
   this.$refs.contactForm.resetValidation();
 }
 ```
+
+# Deployment
+
+[Deploy to firebase](./Firebase_Deployment.md)

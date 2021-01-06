@@ -36,7 +36,7 @@ If you want a more in depth look at how Vue is different from React, you can rea
 1. [Chapter 5: Mixins](/chapters/Session_5.md)
 1. [Chapter 6: Vue Router](/chapters/Session_6.md)
 1. [Chapter 7: Query Params](/chapters/Session_7.md)
-1. [Chapter 7: Navigation Guards](/chapters/Session_8.md)
-1. [Chapter 7: Optimization & Lazy Loading](/chapters/Session_9.md)
+1. [Chapter 8: Navigation Guards](/chapters/Session_8.md)
+1. [Chapter 9: Optimization & Lazy Loading](/chapters/Session_9.md)
 
 ### Excited yet? [Let's dive in...](./chapters/Session_1.md)
