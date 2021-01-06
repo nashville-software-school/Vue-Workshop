@@ -16,7 +16,7 @@ In this chapter we're going to look at optimizing our application by splitting i
 
 When we've been deploying our projects, we've run the `npm run build` command as our first step. What is it doing?
 
-When we create projects with the Vue CLI, it provides us with [webpack](https://survivejs.com/webpack/what-is-webpack/) tooling which will take all the code in our application, look at the entry point (in our case this is `main.js`), recursively examine all the import statements, and bundle all our code up into a single JS file and make that file as small as possible by doing things like removing all whitespace and renaming our variables to single letters. In then outputs this code in the `dist/` directory. This has pros and cons.
+When we create projects with the Vue CLI, it provides us with [webpack](https://survivejs.com/webpack/what-is-webpack/) tooling which will take all the code in our application, look at the entry point (in our case this is `main.js`), recursively examine all the import statements, and bundle all our code up into a single JS file and make that file as small as possible by doing things like removing all whitespace and renaming our variables to single letters. It then outputs this code in the `dist/` directory. This has pros and cons.
 
 On the positive side, users only have to download a single JS file instead of a bunch of individual files when they come to our site. This means less network requests on their part and the app gets delivered to them faster.
 
