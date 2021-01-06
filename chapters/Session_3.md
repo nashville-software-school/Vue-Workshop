@@ -25,7 +25,50 @@ A demo of the application we'll be building can be seen [here](https://nss-vue-p
 
 ## Project setup
 
-TODO: create with CLI, add vuetify, empty out App.vue
+`cd` into the directory you'd like to add your new project and run
+
+```sh
+vue create phonebook
+```
+
+|           prompt           |          answer           |
+| :------------------------: | :-----------------------: |
+|           Preset           | Manually select features  |
+|      Features needed       |  Babel, Linter/Formatter  |
+|       Linter config        |     ESLint + Prettier     |
+|    Additional lint feat    |       Lint on save        |
+| Config location preference | In dedicated config files |
+|       Save as preset       |             N             |
+
+`cd` into the new phonebook directory. We'll be using the [Vuetify](https://vuetifyjs.com/en/) component library which can be added to our project by running
+
+```sh
+vue add vuetify
+```
+
+and choosing the `Default` preset.
+
+This will add a bunch of boilerplate code that we don't want. Empty out all the code in `App.vue` except for the following
+
+```vue
+<template>
+  <v-app>
+    <v-app-bar app color="teal" dark>
+      <div class="d-flex align-center">
+        <h3>Phonebook</h3>
+      </div>
+    </v-app-bar>
+
+    <v-main class="mt-5">
+      <!-- Stuff will go here -->
+    </v-main>
+  </v-app>
+</template>
+
+<script>
+export default {};
+</script>
+```
 
 ## Creating the Phonebook component
 

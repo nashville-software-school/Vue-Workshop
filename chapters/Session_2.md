@@ -25,7 +25,22 @@ In this chapter we're going to use multiple components to make a simple ToDo app
 
 ## Use the CLI to create a project
 
-TODO
+`cd` into the directory you'd like to add your new project and run
+
+```sh
+vue create todo
+```
+
+This will take you through the Vue CLI project setup. Answer the questions with the following responses
+
+|           prompt           |          answer           |
+| :------------------------: | :-----------------------: |
+|           Preset           | Manually select features  |
+|      Features needed       |  Babel, Linter/Formatter  |
+|       Linter config        |     ESLint + Prettier     |
+|    Additional lint feat    |       Lint on save        |
+| Config location preference | In dedicated config files |
+|       Save as preset       |             N             |
 
 ## Creating dummy data
 
