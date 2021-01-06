@@ -71,6 +71,7 @@ This non-trivial problem is made incredibly simple with Vue. We can split our co
       return next();
     }
   }
+}
 ```
 
 > My Memes route
