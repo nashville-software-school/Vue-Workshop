@@ -44,6 +44,37 @@ The great thing about this pattern is that components at _any_ level can communi
 
 TODO: CLI setup, vue add vuetify, MovieDb API key
 
+1. `cd` into the directory you'd like to add your new project and run
+
+```sh
+vue create movie-vuer
+```
+
+|           prompt           |            answer             |
+| :------------------------: | :---------------------------: |
+|           Preset           |   Manually select features    |
+|      Features needed       | Babel, Vuex, Linter/Formatter |
+|       Linter config        |       ESLint + Prettier       |
+|    Additional lint feat    |         Lint on save          |
+| Config location preference |   In dedicated config files   |
+|       Save as preset       |               N               |
+
+2. Add the Vuetify library and choose the `Default` preset
+
+```sh
+vue add vuetify
+```
+
+3. Remove the boilerplate code in `App.vue`
+
+4. Register for a new API key from The Movie Database [here](https://www.themoviedb.org/signup)
+
+5. Create a `.env.local` file at the root of the Vue project with the following and add your API key
+
+```
+VUE_APP_MOVIE_API_KEY=xxxxxxxxxxxxxxxxxxxxx
+```
+
 ## Examining the Vuex store
 
 If we look at the `index.js` file inside the `store` directory we can see what an empty Vuex store looks like. The first thing to do is to think about all the shared state we want to include in the store. We can start with these items
