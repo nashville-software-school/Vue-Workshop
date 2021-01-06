@@ -27,6 +27,10 @@ If you want a more in depth look at how Vue is different from React, you can rea
 - Conform to Vue best practices as outlined by the Official Style Guide
 - Build a portfolio by deploying all applications
 
+## Installations
+
+Please follow the installation steps outlined [here](./Installs.md)
+
 ## Table of Contents
 
 1. [Chapter 1: Component Basics](/chapters/Session_1.md)
