@@ -25,7 +25,29 @@ A demo of this application can been seen [here](https://nss-vue-meme-forum.web.a
 
 ## Project setup
 
-Todo: CLI create with router, add Vuetify
+1. `cd` into the directory you'd like to add your new project and run
+
+```sh
+vue create meme-forum
+```
+
+|           prompt           |             answer              |
+| :------------------------: | :-----------------------------: |
+|           Preset           |    Manually select features     |
+|      Features needed       | Babel, Router, Linter/Formatter |
+|        History mode        |                Y                |
+|       Linter config        |        ESLint + Prettier        |
+|    Additional lint feat    |          Lint on save           |
+| Config location preference |    In dedicated config files    |
+|       Save as preset       |                N                |
+
+2. Add the Vuetify library and choose the `Default` preset
+
+```sh
+vue add vuetify
+```
+
+3. Remove the boilerplate code in `App.vue`
 
 ## Firebase/Firestore Setup
 

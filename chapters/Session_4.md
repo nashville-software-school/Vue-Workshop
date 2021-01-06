@@ -42,8 +42,6 @@ The great thing about this pattern is that components at _any_ level can communi
 
 ## Project setup
 
-TODO: CLI setup, vue add vuetify, MovieDb API key
-
 1. `cd` into the directory you'd like to add your new project and run
 
 ```sh
