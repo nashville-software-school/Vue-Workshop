@@ -29,7 +29,7 @@ If you want a more in depth look at how Vue is different from React, you can rea
 
 ## Installations
 
-Please follow the installation steps outlined [here](./Installs.md)
+Please follow the installation steps outlined [here](./chapters/Installs.md)
 
 ## Table of Contents
 
