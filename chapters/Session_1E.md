@@ -14,4 +14,6 @@ Give them 3 buttons to click: Angular, Vue, and React. When they click a button,
 > - Conditional rendering with `v-if`
 > - Attribute binding
 
+#### Stuck?
+
 Need help? Try the [Code by Numbers](./Session_1E_CBN.md)
