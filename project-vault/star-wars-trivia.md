@@ -2,6 +2,8 @@
 
 For this project, create a set of flashcards which ask the user Star Wars trivia (or some other topic if you'd rather).
 
+[**View a Demo**](https://nss-vue-trivia.web.app/)
+
 ## Part 1
 
 - Create a file somewhere in your project named `trivia.js` and add [these questions](../assets/trivia.js). If you don't want to use Star Wars trivia and would rather do something else, replace these questions with a topic of your choice.
