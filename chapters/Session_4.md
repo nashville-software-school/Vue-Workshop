@@ -435,9 +435,10 @@ import { mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["movieDetails"])
-  }
+    ...mapState(["movieDetails"]),
+  },
 };
+</script>
 ```
 
 Now use the component in `App.vue`
