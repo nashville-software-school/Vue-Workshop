@@ -557,7 +557,6 @@ And once again use the component in `App.vue`
             <movie-details />
           </v-col>
           <v-col :sm="12" :md="6">
-            <!-- Todo: REVIEWS GO HERE -->
             <movie-reviews />
           </v-col>
         </v-row>
