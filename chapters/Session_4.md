@@ -194,7 +194,7 @@ Go back to the `SearchResults` component to add some styling. We can use Vuetify
 </template>
 ```
 
-> **NOTE**: The movie object's `post_path` property doesn't contain an absolute URL. We need to append it to a base URL which includes a desired width as part of the path. In the example above the `/w200` in the URL is requesting an image 200px wide. To read more about this, look at the [Movie Database API Docs](https://developers.themoviedb.org/3/getting-started/images)
+> **NOTE**: The movie object's `poster_path` property doesn't contain an absolute URL. We need to append it to a base URL which includes a desired width as part of the path. In the example above the `/w200` in the URL is requesting an image 200px wide. To read more about this, look at the [Movie Database API Docs](https://developers.themoviedb.org/3/getting-started/images)
 
 ## Creating a header component with search
 
