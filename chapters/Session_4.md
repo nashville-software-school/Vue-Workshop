@@ -578,14 +578,12 @@ Finally you can spruce it up with some Vuetify components
       <v-list-item v-for="review in reviews" :key="review.id">
         <v-list-item-avatar>
           <v-img
-            :src="getImageUrl(review.author_details.avatar_path, 200)"
+            :src="`https://image.tmdb.org/t/p/w200${review.author_details.avatar_path}`"
           ></v-img>
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title>{{ review.author }}</v-list-item-title>
-          <v-list-item-subtitle
-            >{{ formatDate(review.created_at) }}</v-list-item-subtitle
-          >
+          <v-list-item-subtitle> {{ review.created_at }} </v-list-item-subtitle>
           <div class="mt-2">{{ review.content }}</div>
         </v-list-item-content>
       </v-list-item>
