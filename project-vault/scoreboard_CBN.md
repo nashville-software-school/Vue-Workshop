@@ -2,7 +2,7 @@
 
 For this project, create a scoreboard for two teams with `+` and `-` buttons and display the currently leading team.
 
-[View a Demo](https://nss-vue-scoreboard.web.app/)
+[**View a Demo**](https://nss-vue-scoreboard.web.app/)
 
 ## Part 1
 
