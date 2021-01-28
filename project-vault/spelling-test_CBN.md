@@ -48,6 +48,9 @@ For this project, create a spelling test that makes use of the webkit speech API
 1. In the `App.vue` template, conditionally show either the form or the score depending on whether or not the test has been finished
 1. Above the form in `App.vue` add a small heading to display which number word the user is on (e.g. "Word 4 of 10")
 
+**Optional**
+Check out [vue watchers](https://vuejs.org/v2/guide/computed.html#Watchers) to make it so the next word is immediately spoken as soon as a user submits a spelling instead of having to click the "Say Word" button. You can use this in the `Speech` component by watching for changes to the `word` property
+
 #### Still Stuck?
 
 Try checking out the solution files [here](https://github.com/NSS-Vue-Workshop/Spelling-Test)
