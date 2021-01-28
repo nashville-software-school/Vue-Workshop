@@ -414,12 +414,17 @@ Let's show some love to our Create form and add some Vuetify styling to it. Upda
           />
         </v-col>
         <v-col>
-          <v-text-field outlined v-model="top" type="text" label="Top Text" />
+          <v-text-field
+            outlined
+            v-model="topText"
+            type="text"
+            label="Top Text"
+          />
         </v-col>
         <v-col>
           <v-text-field
             outlined
-            v-model="bottom"
+            v-model="bottomText"
             type="text"
             label="Bottom Text"
           />
@@ -479,8 +484,8 @@ Now add a button in the template just below the generated meme and bind the `sav
 <div v-if="showMeme">
   <meme
     class="mx-auto"
-    :top="top"
-    :bottom="bottom"
+    :top="topText"
+    :bottom="bottomText"
     :imageURL="imageURL"
     :width="800"
   />
