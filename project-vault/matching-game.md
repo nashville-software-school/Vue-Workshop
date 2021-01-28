@@ -27,3 +27,7 @@ For this project, build a memory matching game which has users flip over cards t
 ## Part 2
 
 1. If the user matches all cards successfully, they should be shown a message at the top of the screen congratulating them.
+
+#### Stuck?
+
+Need help? Try the [Code by Numbers](./matching-game_CBN.md)
