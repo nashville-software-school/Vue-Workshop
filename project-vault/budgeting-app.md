@@ -4,7 +4,7 @@ For this project, build dashboard to manage your monthly expenses. This can be a
 
 [**View a Demo**](https://nss-vue-budget.web.app/)
 
-> **NOTE**: I would recommend using the [ApexCharts] library for building the pie graph however there are other tools out there that can also get the job done. For data persistence I recommend using local storage although you may choose to use Firebase's Firestore if you prefer.
+> **NOTE**: I would recommend using the [ApexCharts](https://apexcharts.com/docs/vue-charts/) library for building the pie graph however there are other tools out there that can also get the job done. For data persistence I recommend using local storage although you may choose to use Firebase's Firestore if you prefer.
 
 ## Part 1
 
@@ -33,4 +33,4 @@ For this project, build dashboard to manage your monthly expenses. This can be a
 
 #### Stuck?
 
-Need help? Try the [Code by Numbers](./matching-game_CBN.md)
+Need help? Try the [Code by Numbers](./budgeting-app_CBN.md)
