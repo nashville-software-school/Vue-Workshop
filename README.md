@@ -14,7 +14,7 @@ It assumes you are familiar with building applications with components, and are 
 
 Since React is just meant to be a library, it means that certain things like patterns, best practices, and tooling (i.e. React Router, Redux, etc) are largely left up to the community. As a result you'll find that a React application built by one team is very different than one built by another team.
 
-Vue allows developers the ability to opt in to tools for routing and state management, however they are built and managed by the core Vue team. The Vue community also largely agrees on how Vue apps should be built, and even has an official style guide which we'll explore later. The benefit of this is that a Vue developer should be able to join any new project and start being productive immediately.
+Vue allows developers the ability to opt in to tools for routing and state management, however they are built and managed by the core Vue team. The Vue community also largely agrees on how Vue apps should be built, and even has an [official style guide](https://vuejs.org/v2/style-guide/). The benefit of this is that a Vue developer should be able to join any new project and start being productive immediately.
 
 If you want a more in depth look at how Vue is different from React, you can read about it on the [Vue docs](https://vuejs.org/v2/guide/comparison.html)
 
