@@ -1,6 +1,6 @@
 # Build a Madlibs App
 
-For this project, build an app using the [Madlibz API](https://madlibz.herokuapp.com/api) to allow users to create and save their favorite Madlibs in a Firestore database. The app will have multiple views so you'll need to use the Vue Router. Using Vuex for this project (and all projects) is optional and entirely up to you.
+For this project, build a SPA using the [Madlibz API](https://madlibz.herokuapp.com/api) to allow users to create and save their favorite Madlibs in a Firestore database. The app will have multiple views so you'll need to use the Vue Router. Using Vuex for this project (and all projects) is optional and entirely up to you.
 
 [**View a Demo**](https://nss-vue-madlibs.web.app/)
 
@@ -9,7 +9,7 @@ For this project, build an app using the [Madlibz API](https://madlibz.herokuapp
 1. Create a home route with some sort of welcome message for your app. This should be visible when the user's URL path is `/`
 1. Create a route for users to create their own Madlib. This route should fetch a random template from the Madlibz API and dynamically render input fields on the page
 1. When the user submits the form, the app should piece together the Madlib story and show it to the user
-1. Create a navigation component (either a top navbar or a sidenav) so that users can go between the different routes
+1. Create a navigation component (either a top navbar or a side nav) so that users can go between the different routes
 
 ## Part 2
 
