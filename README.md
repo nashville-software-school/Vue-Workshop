@@ -27,6 +27,16 @@ If you want a more in depth look at how Vue is different from React, you can rea
 - Conform to Vue best practices as outlined by the Official Style Guide
 - Build a portfolio by deploying all applications
 
+## How is this course structured?
+
+Throughout the course, the instructor will live code 4 application of varying sizes. After each lesson, students may choose to either re-create the well documented steps to build the same application that was done in class, or select a project from the [Project Vault](./project-vault/README.md).
+
+Students may choose to work on Vault projects by themselves or in groups. Each project in the Vault comes with a link to an example of the application and a list of requirements. Since the class is part-time and face to face time with the instructor is limited, there is also an optional section for most vault projects called `Code By Numbers` -- a high level step-by-step guide for completing the project
+
+Each app that we build out in class will unlock more applications in the vault for students to work on.
+
+Every project students build will be deployed to Firebase
+
 ## Installations
 
 Please follow the installation steps outlined [here](./chapters/Installs.md)
@@ -43,4 +53,6 @@ Please follow the installation steps outlined [here](./chapters/Installs.md)
 1. [Chapter 8: Navigation Guards](/chapters/Session_8.md)
 1. [Chapter 9: Optimization & Lazy Loading](/chapters/Session_9.md)
 
-### Excited yet? [Let's dive in...](./chapters/Session_1.md)
+### Excited yet?
+
+[Let's dive in...](./chapters/Session_1.md)

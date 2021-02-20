@@ -50,6 +50,11 @@ For this project, you'll need to use Vue Router, Firebase, [Leaflet](https://lea
    - The message they left
 1. **Optional Challenge** - The application should try to get the current location of the user when they first enter the app. When viewing the details of a geocache, the view should also display the distance in miles the user is from the cache
 
+## Part 6 (optional)
+
+1. Add a navigation guard on the `/hide` route so that it is only accessible to authenticated users
+1. Lazy load the `/hide` route so that its code is not in the main bundle
+
 # Tips
 
 There is no Code-by-Numbers for this project so here are some tips to help you get started:
@@ -58,3 +63,7 @@ There is no Code-by-Numbers for this project so here are some tips to help you g
 - Decide if you want to use Vuex. It's not required and this application could be built without it. It would be recommended if you want more experience using it
 - Plan in advance how you'd like to structure your data in Firestore. It's recommend that you have a `geocaches` collection and each document has a `logs` subcollection
 - If your Leaflet markers are not showing on your map, try [this fix](https://vue2-leaflet.netlify.app/quickstart/#marker-icons-are-missing) in your `main.js` file
+
+#### Still Stuck?
+
+Try checking out the solution files [here](https://github.com/NSS-Vue-Workshop/Geo-Nash)
