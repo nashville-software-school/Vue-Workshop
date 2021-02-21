@@ -435,9 +435,10 @@ import { mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["movieDetails"])
-  }
+    ...mapState(["movieDetails"]),
+  },
 };
+</script>
 ```
 
 Now use the component in `App.vue`
@@ -650,3 +651,7 @@ state: {
 # Deployment
 
 [Deploy to firebase](./Firebase_Deployment.md)
+
+# What's next?
+
+You're now free to work on any Level 1, 2 or 3 projects from the [Project Vault](../project-vault/README.md)

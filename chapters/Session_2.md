@@ -414,3 +414,7 @@ Now use the computed property in the template
 ```html
 <button @click="handleClick">{{ buttonText }}</button>
 ```
+
+# What's next?
+
+You're now free to work on any Level 1 projects from the [Project Vault](../project-vault/README.md)

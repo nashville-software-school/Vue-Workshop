@@ -582,3 +582,7 @@ handleSubmit() {
 # Deployment
 
 [Deploy to firebase](./Firebase_Deployment.md)
+
+# What's next?
+
+You're now free to work on any Level 1 or Level 2 projects from the [Project Vault](../project-vault/README.md)

@@ -639,3 +639,7 @@ You're all set with an awesome meme generator app! We didn't add anything to the
 # Deployment
 
 [Deploy to firebase](./Firebase_Deployment.md)
+
+# What's next?
+
+You're now free to work on any project from the [Project Vault](../project-vault/README.md)
