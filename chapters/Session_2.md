@@ -311,7 +311,7 @@ Now we need to define our `handleStatusChange` method and decide what should hap
 ```js
 methods: {
   handleStatusChange(item) {
-    item.completed = !item.completed;
+    item.complete = !item.complete;
     console.log(item);
   },
 }
