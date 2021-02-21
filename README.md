@@ -29,13 +29,15 @@ If you want a more in depth look at how Vue is different from React, you can rea
 
 ## How is this course structured?
 
-Throughout the course, the instructor will live code 4 application of varying sizes. After each lesson, students may choose to either re-create the well documented steps to build the same application that was done in class, or select a project from the [Project Vault](./project-vault/README.md).
+Throughout the course, the instructor will live code 4 applications of varying sizes. After each lesson, students may choose to either re-create the well documented steps to rebuild the same application that was done in class, or select a project from the [Project Vault](./project-vault/README.md).
 
-Students may choose to work on Vault projects by themselves or in groups. Each project in the Vault comes with a link to an example of the application and a list of requirements. Since the class is part-time and face to face time with the instructor is limited, there is also an optional section for most vault projects called `Code By Numbers` -- a high level step-by-step guide for completing the project
+Students may choose to work on Vault projects by themselves or in groups. Each project in the Vault comes with a link to an example application and a list of requirements. Since the class is part-time and face to face time with the instructor is limited, there is also an optional section for most vault projects called `Code By Numbers` -- a high level step-by-step guide for completing the project.
 
 Each app that we build out in class will unlock more applications in the vault for students to work on.
 
-Every project students build will be deployed to Firebase
+Every project students build will be deployed to Firebase.
+
+Between classes the instructor will occasionally ask you to watch a short video on various JavaScript features that will be used in the next lecture. These videos will typically be only 5-10 minutes long.
 
 ## Installations
 

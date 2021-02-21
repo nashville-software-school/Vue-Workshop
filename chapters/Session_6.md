@@ -54,7 +54,7 @@ vue add vuetify
 We're going to use Firebase's Firestore database to persist our user's shared memes.
 
 1. On the [Firebase website](https://console.firebase.google.com/u/0/) create a new project and give our Vue meme app a name.
-1. Once the project is created, click the "Cloud Firestore" link in the left sidebar. Next click the button that says "Create database"
+1. Once the project is created, click the "Cloud Firestore" link in the left sidebar. Next click the button that says "Create database" and select the option for "Test Mode" when prompted
 1. Toward the top of the left sidebar click the "Project Overview" link. On the Project Overview page, click the "+ Add app" button toward the top. It will ask you what kind of app you're building. Click the "Web" button. Finally give your app a nickname (something like "Meme App") and click the "Register app" button and leave the generated javascript code on the page--we'll need it for the next step.
 1. In your Vue application, add a `.env.local` file at the root of your project and add in the following key value pairs. Replace the values with the ones from the firebase website
    ```
@@ -146,7 +146,7 @@ We've got one last step before we can start navigating the different pages in ou
 
 ## Specify where our route components should go with `<router-view>`
 
-Go into `App.js` and empty out everything in the `<app-bar>` component and remove the `<HelloWorld>` component from the template. While you're at it, since this is an app for Vue specific memes, let's change the app bar color to either dark green or teal. Your `App` component should now look like this
+Go into `App.vue` and empty out everything in the `<app-bar>` component and remove the `<HelloWorld>` component from the template. While you're at it, since this is an app for Vue specific memes, let's change the app bar color to either dark green or teal. Your `App` component should now look like this
 
 ```vue
 <template>
@@ -440,8 +440,8 @@ Let's show some love to our Create form and add some Vuetify styling to it. Upda
     <div v-if="showMeme">
       <meme
         class="mx-auto"
-        :top="top"
-        :bottom="bottom"
+        :top="topText"
+        :bottom="bottomText"
         :imageURL="imageURL"
         :width="800"
       />
@@ -527,8 +527,10 @@ As soon as a user comes to the `Feed` page, we want to grab all the memes from f
 
 ```js
 import { db } from "../firebase";
+import Meme from "../components/Meme";
 
 export default {
+  components: { Meme },
   data() {
     return {
       memes: [],
