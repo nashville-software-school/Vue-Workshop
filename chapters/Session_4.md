@@ -1,6 +1,10 @@
 ![Vue Logo](../images/banner.jpg)
 
-\*\* TODO: Prerequisites: Destructuring, MovieDB API, async/await, env variables
+> **NOTE**: This chapter has prerequisites
+>
+> - [Simplify promises with async/await (1/2)](https://www.youtube.com/watch?v=Yp9KIcSKTNo)
+> - [Simplify promises with async/await (2/2)](https://www.youtube.com/watch?v=tc8DU14qX6I)
+> - [How to store API keys in Environment Variables](https://medium.com/js-dojo/how-to-use-environment-variables-in-vue-js-273eba0102b0)
 
 [![](https://img.shields.io/badge/component-text_interpolation-green?logo=vue.js)](https://vuejs.org/v2/guide/syntax.html#Text)
 [![](https://img.shields.io/badge/component-v--for-green?logo=vue.js)](https://vuejs.org/v2/guide/list.html)

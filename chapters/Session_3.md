@@ -1,6 +1,10 @@
 ![Vue Logo](../images/banner.jpg)
 
-\*\* TODO: Prerequisites are Vuetify
+> **NOTE**: There are prerequisites for this chapter
+>
+> In this chapter we will be using the Vuetify component library. It's recommended that your explore the [docs](https://vuetifyjs.com/en/) ahead of time--particularly the UI Components section. All projects that are done in class will be built with Vuetify so it will be helpful if you get familiar with the components they offer and how to read their documentation.
+>
+> The application we will build in this chapter will make use of the [Grid System](https://vuetifyjs.com/en/components/grids/), [Text Field](https://vuetifyjs.com/en/components/text-fields/), and [Simple Table](https://vuetifyjs.com/en/components/simple-tables/) components. Read through the documentation on each to see how they are used.
 
 [![](https://img.shields.io/badge/component-v--model-green?logo=vue.js)](https://vuejs.org/v2/guide/forms.html)
 [![](https://img.shields.io/badge/component-lifecycle_methods-green?logo=vue.js)](https://vuejs.org/v2/api/#Options-Lifecycle-Hooks)

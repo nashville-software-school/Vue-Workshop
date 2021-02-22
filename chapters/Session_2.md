@@ -1,6 +1,9 @@
 ![Vue Logo](../images/banner.jpg)
 
-\*\* TODO: Prerequisites are spread op and object property shorthand
+> **NOTE**: There are ES6 prerequisites for this chapter
+>
+> - [Object property and method shorthand](https://www.youtube.com/watch?v=FtLRx14wl9s)
+> - [Destructuring and spread operator](https://www.youtube.com/watch?v=NIq3qLaHCIs)
 
 [![](https://img.shields.io/badge/component-data-green?logo=vue.js)](https://vuejs.org/v2/guide/instance.html#Data-and-Methods)
 [![](https://img.shields.io/badge/component-text_interpolation-green?logo=vue.js)](https://vuejs.org/v2/guide/syntax.html#Text)
