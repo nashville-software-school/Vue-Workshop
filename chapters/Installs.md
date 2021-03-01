@@ -3,9 +3,9 @@
 # Installations
 
 ### A Quick Note on Permissions
-Some of the installations below are global which can mean they require a higher level of permissions. If you encounter issues during installation, you may need to add  ```sudo``` to the beginning of the command in order to run it properly.
+Some of the installations below are global which can mean they require a higher level of permissions. If you are using macOS and encounter issues during installation, you may need to add  `sudo` to the beginning of the command in order to run it properly.
 
-### Vue CLI
+## Vue CLI
 
 The Vue CLI is a command line tool that makes it easy to create new Vue applications. It can be installed globally via npm
 
@@ -13,7 +13,7 @@ The Vue CLI is a command line tool that makes it easy to create new Vue applicat
 npm install -g @vue/cli
 ```
 
-### Vue Devtools
+## Vue Devtools
 
 Vue Devtools is a browser extension that makes inspecting and debugging Vue applications easy.
 
