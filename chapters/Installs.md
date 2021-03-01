@@ -1,4 +1,9 @@
+
+
 # Installations
+
+### A Quick Note on Permissions
+Some of the installations below are global which can mean they require a higher level of permissions. If you encounter issues during installation, you may need to add  ```sudo``` to the beginning of the command in order to run it properly.
 
 ### Vue CLI
 
