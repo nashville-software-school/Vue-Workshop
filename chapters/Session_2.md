@@ -129,7 +129,7 @@ By adding a `components` property to our component object we can specify the oth
 
 You should now see the header from your `TodoList` component on the screen.
 
-**NOTE**: When we imported the `TodoList` component in the script section we use **PascalCasing**, however when when use the component in our template we use **kebab-casing**. If you prefer your components to use PascalCasing in your templates (as you would in React), Vue also allows that. You could just as easily have written that same statement above like this
+**NOTE**: When we imported the `TodoList` component in the script section we use **PascalCasing**, however when when use the component in our template we use **kebab-casing**. If you prefer your components to use PascalCasing in your templates (as you would in React), Vue also allows that. You could just as easily have written the statement above like this
 
 ```vue
 <template>
