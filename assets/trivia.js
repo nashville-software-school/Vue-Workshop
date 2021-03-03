@@ -177,4 +177,4 @@ export default [
     answerShown: false,
     difficulty: "medium"
   }
-];
+].map((q, index) => ({ ...q, id: index + 1 }));;
