@@ -271,7 +271,7 @@ Let's add a button on each item for the user to mark a todo as completed.
 </template>
 ```
 
-When the user clicks the button we want to have the `TodoItem` component alert to the `TodoList` component so that it can update the list. When child component want to alert parent components that an event has taken place, the child component can _emit_ that event.
+When the user clicks the button we want to have the `TodoItem` component alert to the `TodoList` component so that it can update the list. When child components want to alert parent components that an event has taken place, the child component can _emit_ that event.
 
 Update the `TodoItem` component to include a method named
 `handleClick`. This method will emit an event to let the parent know that a todo item should be updated.
