@@ -206,7 +206,7 @@ The `TodoList` component needs to tell each `TodoItem` component about the data 
 </div>
 ```
 
-This is just like setting any other HTML attribute. Remember though that when we want to bind an attributes to an object or JavaScript expression we need to prefix it with a colon `:`
+This is just like setting any other HTML attribute. Remember though that when we want to bind an attribute to an object or JavaScript expression we need to prefix it with a colon `:`
 
 ## Accepting props in a child component
 
