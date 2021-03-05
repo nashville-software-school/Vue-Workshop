@@ -17,6 +17,7 @@
 |    Select default project    | _Whatever project name you just created_ |
 | What is the public directory |                   dist                   |
 |      Configure as a SPA      |                    y                     |
+|     Automatic build/deploy   |                   n                      |
 
 - Run `npm run build`
 - Run `firebase deploy`
