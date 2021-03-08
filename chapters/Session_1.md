@@ -22,7 +22,7 @@ Let's start out by playing with some of the Vue syntax inside of [CodeSandbox](h
 
 ### main.js
 
-This is the entry point for our Vue applications. Every app will start by creating a new Vue instance, and will decide which component will should be rendered at the top of our component tree. Here we can see that the default behavior is to render the `App` component at the top of the tree.
+This is the entry point for our Vue applications. Every app will start by creating a new Vue instance, and will decide which component should be rendered at the top of our component tree. Here we can see that the default behavior is to render the `App` component at the top of the tree.
 
 ```js
 import Vue from "vue";
