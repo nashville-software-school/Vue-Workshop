@@ -79,6 +79,8 @@ VUE_APP_MOVIE_API_KEY=xxxxxxxxxxxxxxxxxxxxx
 
 ## Examining the Vuex store
 
+> **NOTE**: If you don't have a `/store` directory in your project, you may have forgotten to tell the Vue CLI that you wanted Vuex when you ran `vue create movie-vuer`. If that's the case, you can still add Vuex to your existing project by running `vue add vuex`
+
 If we look at the `index.js` file inside the `store` directory we can see what an empty Vuex store looks like. The first thing to do is to think about all the shared state we want to include in the store. We can start with these items
 
 - A string for holding what the user has searched for
@@ -551,25 +553,22 @@ And once again use the component in `App.vue`
 
 ```html
 <template>
-  <div v-if="reviews.length > 0">
-    <h3 class="red--text">User Reviews</h3>
-    <v-list three-line>
-      <v-list-item v-for="review in reviews" :key="review.id">
-        <v-list-item-avatar>
-          <v-img
-            :src="
-              `https://image.tmdb.org/t/p/w200${review.author_details.avatar_path}`
-            "
-          ></v-img>
-        </v-list-item-avatar>
-        <v-list-item-content>
-          <v-list-item-title>{{ review.author }}</v-list-item-title>
-          <v-list-item-subtitle>{{ review.created_at }}</v-list-item-subtitle>
-          <div class="mt-2">{{ review.content }}</div>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
-  </div>
+  <v-app>
+    <app-header />
+    <v-main>
+      <v-container>
+        <search-results />
+        <v-row class="mt-6">
+          <v-col :sm="12" :md="6">
+            <movie-details />
+          </v-col>
+          <v-col :sm="12" :md="6">
+            <movie-reviews />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 ```
 
