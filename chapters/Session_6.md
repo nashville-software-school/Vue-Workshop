@@ -3,7 +3,7 @@
 > **NOTE**: This chapter has prerequisites
 >
 > - [What is Firestore](https://www.youtube.com/watch?v=v_hR4K4auoQ)
-> - [Getting started with Firestore)](https://us02web.zoom.us/rec/play/XP0ieGjaMcy7W7r1go2uNTQYBqnAFp_o4d3MehvdVkpo3hFG7A30eHTpwm4sdGLuWba0AP6BaQrEE6mQ.qcWmOjYQliQN0Zas)
+> - [Getting started with Firestore](https://us02web.zoom.us/rec/play/XP0ieGjaMcy7W7r1go2uNTQYBqnAFp_o4d3MehvdVkpo3hFG7A30eHTpwm4sdGLuWba0AP6BaQrEE6mQ.qcWmOjYQliQN0Zas)
 
 [![](https://img.shields.io/badge/router-defining_routes-orange?logo=vue.js)](https://router.vuejs.org/guide/#html)
 [![](https://img.shields.io/badge/router-dynamic_routes-orange?logo=vue.js)](https://router.vuejs.org/guide/essentials/dynamic-matching.html)
