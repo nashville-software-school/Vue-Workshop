@@ -371,7 +371,7 @@ Now add a `div` with a `v-if` directive around the Meme tag in the template
 
 ```html
 <div v-if="showMeme">
-  <meme :top="top" :bottom="bottom" :imageURL="imageURL" />
+  <meme :top="topText" :bottom="bottomText" :imageURL="imageURL" />
 </div>
 ```
 
