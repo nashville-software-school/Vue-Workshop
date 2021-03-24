@@ -35,7 +35,7 @@ For this project, build dashboard to manage your monthly expenses. This can be a
 
 ## Part 1
 
-1. Create a new app using `vue create matching-game` and add Vuetify using `vue add vuetify`
+1. Create a new app using `vue create monthly-budget` and add Vuetify using `vue add vuetify`
 1. In `App.vue` add 2 data properties for `annualIncome` and `monthlyExpenses`. Initialize them to zero and an empty array respectively
 1. Create an `AnnualIncome.vue` component and have it accept a prop of `annualAmount`. Add a card with an input to its template and bind `annualAmount` to the input's `v-model`
 1. Add the `AnnualIncome` component to the `App.vue` template and pass in `annualIncome` as props
@@ -50,7 +50,7 @@ For this project, build dashboard to manage your monthly expenses. This can be a
 1. Create a computed property named `displayAmount` which will return a formatted currency string using the `netAmount`. **HINT**: use the [JavaScript Intl.NumberFormat class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) to help with this
 1. In the `IncomeCard.vue` template, add 2 header tags and render the `title` text as well as the `displayAmount`
 1. Use the `:class` binding on the `displayAmount` header so that a class of `green--text` gets added if `netAmount` is greater than 0. Do the same so that a class of `red--text` gets added if `netAmount` is less that 0
-1. In the `App.vue` template add 2 `IncomeCard` components. Pass them `title` props of "Monthly Annual" and "Annual Net" respectively. Pass them a hard coded value for `netAmount` to start with. Try with positive and negative numbers to test whether the class binding and coloring is correct
+1. In the `App.vue` template add 2 `IncomeCard` components. Pass them `title` props of "Monthly Net" and "Annual Net" respectively. Pass them a hard coded value for `netAmount` to start with. Try with positive and negative numbers to test whether the class binding and coloring is correct
 1. In `App.vue` implement 5 computed properties:
    - **monthlyIncome**: The annual income divided by 12
    - **totalMonthlyExpenses**: The sum of all monthly expenses
