@@ -38,21 +38,21 @@ Let's say we've built an app with 3 different types of users, and each user type
 - User Type 2 can visit routes A, D, E, and F
 - User Type 3 can visit routes A, G, and H
 
-When _any_ user comes to the application, they will download the single bundled JS file. Regardless of what type of user it is, they will be downloading code that they theoretically can't even access
+When _any_ user comes to the application, they will download the single bundled JS file. Regardless of what type of user it is, they will be downloading code that they theoretically can't even access.
 
 ## The fix
 
 A solution to this is to split our code into meaningful chunks. We can decide what code needs to go into a "main" JS bundle that should be delivered immediately for all users, and then have users subsequently request additional JS chunks as they navigate throughout the app.
 
-In scenario 1, all users have access to route A (let's say this is maybe a homepage). Route A might go in the main bundle. User 1 waits until they navigate to route B or C before downloading the chunk containing the code for those routes. User 2 will never go to routes B or C and therefor never download that chunk
+In scenario 1, all users have access to route A (let's say this is maybe a homepage). Route A might go in the main bundle. User 1 waits until they navigate to route B or C before downloading the chunk containing the code for those routes. User 2 will never go to routes B or C and therefore never download that chunk.
 
 In scenario 2, we might say that all the routes except the customization/profile views belongs in the main bundle. When then create separate chunks for the customization and password routes.
 
-If we were to consider our meme application and realize that most of our user base doesn't chose to authenticate--instead most users browse the feed--we can come to the conclusion that the `/my-meme` and `/create` routes should be in separate chunks
+If we were to consider our meme application and realize that most of our user base doesn't chose to authenticate--instead most users browse the feed--we can come to the conclusion that the `/my-meme` and `/create` routes should be in separate chunks.
 
 ## Code splitting with Vue
 
-This non-trivial problem is made incredibly simple with Vue. We can split our code easily by routes when we define them. Update the `my-memes` and `create` routes inside `router/index.js` so that the `component` property is set equal to a function that calls `import`
+This non-trivial problem is made incredibly simple with Vue. We can split our code easily by routes when we define them. Update the `my-memes` and `create` routes inside `router/index.js` so that the `component` property is set equal to a function that calls `import`.
 
 > Create route
 
