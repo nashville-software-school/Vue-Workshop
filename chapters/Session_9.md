@@ -44,9 +44,11 @@ When _any_ user comes to the application, they will download the single bundled 
 
 A solution to this is to split our code into meaningful chunks. We can decide what code needs to go into a "main" JS bundle that should be delivered immediately for all users, and then have users subsequently request additional JS chunks as they navigate throughout the app.
 
-In scenario 1, all users have access to route A (let's say this is maybe a homepage). Route A might go in the main bundle. User 1 waits until they navigate to route B or C before downloading the chunk containing the code for those routes. User 2 will never go to routes B or C and therefore never download that chunk.
+In scenario 1, we might say that all the routes except the customization/profile views belongs in the main bundle. When then create separate chunks for the customization and password routes.
 
-In scenario 2, we might say that all the routes except the customization/profile views belongs in the main bundle. When then create separate chunks for the customization and password routes.
+In scenario 2, all users have access to route A (let's say this is maybe a homepage). Route A might go in the main bundle. User 1 waits until they navigate to route B or C before downloading the chunk containing the code for those routes. User 2 will never go to routes B or C and therefore never download that chunk.
+
+
 
 If we were to consider our meme application and realize that most of our user base doesn't chose to authenticate--instead most users browse the feed--we can come to the conclusion that the `/my-meme` and `/create` routes should be in separate chunks.
 
