@@ -74,7 +74,7 @@ For this project, build an app that will use **Vuex** and the [Spoonacular API](
 
 1. Update the Vuex state to include a property named `diets` and give it an initial value of an empty array. This is where you will hold the dietary restrictions the user selects as strings
 1. Add 2 mutations named `addDiet` and `removeDiet`. These should behave the same as the `addIngredient` and `removeIngredient` mutations you created in the last section
-1. Create a new component named `DietSelect` in the `src/components` directory. In the component's data, define a property named `options`. It should be an array of strings containing "Gluten Free", "Ketogenic", "Vegetarin", "Vegan", "Pescatarian", "Paleo", and "Whole30"
+1. Create a new component named `DietSelect` in the `src/components` directory. In the component's data, define a property named `options`. It should be an array of strings containing "Gluten Free", "Ketogenic", "Vegetarian", "Vegan", "Pescatarian", "Paleo", and "Whole30"
 1. In the `DietSelect` template use the `<v-chip-group>` and `<v-chip>` [Vuetify components](https://vuetifyjs.com/en/components/chip-groups/) to display a chip for each option
 1. Add the `<diet-select>` component to the `App.vue` template. Run the app and confirm that the diet options are visible as chips
 1. In the `DietSelect` component, import `mapState` and `mapMutations` from vuex. Add `addDiet` and `removeDiet` to the component's methods and `diets` to the component's computed property
