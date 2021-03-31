@@ -167,7 +167,7 @@ async saveMeme() {
 
 ## Adding a "My Memes" route
 
-We'll add one last route to our app which will show just the list of meme created by the current user. Let's start by setting up a bare bones component and getting it hooked up to the router. Create a new file in the `views` directory named `MyMemes.vue`
+We'll add one last route to our app which will show just the list of memes created by the current user. Let's start by setting up a bare bones component and getting it hooked up to the router. Create a new file in the `views` directory named `MyMemes.vue`
 
 ```vue
 <template>
