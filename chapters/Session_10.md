@@ -14,8 +14,9 @@ In these last two chapters we're going to look at how to test a couple of our Vu
 
 > **Leaning Objectives**: By the end of this chapter you should be able to
 >
-> - Set up and run tests for you Vue applications
-> - Know how to use the component wrapper object to make assertions about your application
+> - Set up and run tests for your Vue applications
+> - Know how to use the component wrapper object to set up and play out test cases
+> - Use Jest's `expect` function to make assertions about your application
 
 ## Testing Scoreboard
 
