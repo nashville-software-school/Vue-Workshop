@@ -24,6 +24,7 @@ If you want a more in depth look at how Vue is different from React, you can rea
 - Learn the different ways of managing state in a Vue application
 - Learn techniques for modularity and reusability in the Vue ecosystem
 - Learn to leverage the Vue router to create Single Page Applications
+- Learn how to effectively unit test your applications using the Jest framework and the Vue Testing Utils library
 - Conform to Vue best practices as outlined by the Official Style Guide
 - Build a portfolio by deploying all applications
 
@@ -54,6 +55,7 @@ Please follow the installation steps outlined [here](./chapters/Installs.md)
 1. [Chapter 7: Query Params](/chapters/Session_7.md)
 1. [Chapter 8: Navigation Guards](/chapters/Session_8.md)
 1. [Chapter 9: Optimization & Lazy Loading](/chapters/Session_9.md)
+1. [Chapter 10: Unit Testing](/chapters/Session_10.md)
 
 ### Excited yet?
 
