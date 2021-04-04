@@ -55,7 +55,8 @@ Please follow the installation steps outlined [here](./chapters/Installs.md)
 1. [Chapter 7: Query Params](/chapters/Session_7.md)
 1. [Chapter 8: Navigation Guards](/chapters/Session_8.md)
 1. [Chapter 9: Optimization & Lazy Loading](/chapters/Session_9.md)
-1. [Chapter 10: Unit Testing](/chapters/Session_10.md)
+1. [Chapter 10: Unit Testing part 1](/chapters/Session_10.md)
+1. [Chapter 11: Unit Testing part 2](/chapters/Session_11.md)
 
 ### Excited yet?
 

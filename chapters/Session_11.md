@@ -433,7 +433,7 @@ await flushPromises();
 
 Your test should now pass
 
-## Mocking axios's `post` method
+## Mocking axios' `post` method
 
 We saw how to mock the `get` method, so let's now take a look at how we can mock the call to `post`. Let's first take a look at how we're using the `post` method in our actual code
 
