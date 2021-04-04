@@ -10,7 +10,7 @@
 
 # Testing Vue applications
 
-In this chapter we're going to look at how to test a couple of our Vue apps using the [Vue Test Utils](https://vue-test-utils.vuejs.org/) library and the [Jest](https://jestjs.io/) testing framework
+In these last two chapters we're going to look at how to test a couple of our Vue apps using the [Vue Test Utils](https://vue-test-utils.vuejs.org/) library and the [Jest](https://jestjs.io/) testing framework
 
 > **Leaning Objectives**: By the end of this chapter you should be able to
 >
