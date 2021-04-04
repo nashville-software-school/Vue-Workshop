@@ -6,11 +6,11 @@
 
 [![](https://img.shields.io/badge/tesing-mounting-purple?logo=jest)](https://vue-test-utils.vuejs.org/api/mount.html)
 [![](https://img.shields.io/badge/tesing-assertions-purple?logo=jest)](https://jestjs.io/docs/expect)
-[![](https://img.shields.io/badge/tesing-events-purple?logo=jest)](https://vue-test-utils.vuejs.org/guides/#testing-key-mouse-and-other-dom-events)
+[![](https://img.shields.io/badge/tesing-triggering_events-purple?logo=jest)](https://vue-test-utils.vuejs.org/guides/#testing-key-mouse-and-other-dom-events)
 
-# Testing Vue applications
+# Testing Vue applications - part 1
 
-In this chapter we're going to look at how to test a couple of our Vue apps using the [Vue Test Utils](https://vue-test-utils.vuejs.org/) library and the [Jest](https://jestjs.io/) testing framework
+In the next two chapters we're going to look at how to test a couple of our Vue apps using the [Vue Test Utils](https://vue-test-utils.vuejs.org/) library and the [Jest](https://jestjs.io/) testing framework
 
 > **Leaning Objectives**: By the end of this chapter you should be able to
 >
