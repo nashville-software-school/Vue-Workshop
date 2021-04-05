@@ -66,7 +66,7 @@ This installs the Jest testing framework and the Vue Testing Utils library. The 
 
 We've also got a new `tests/unit` directory with an example test file. Feel free to delete this file.
 
-Lastly, we've got a new npm script in our `package.json` file named `test:unit`.
+Lastly, we've got a new npm script in our `package.json` file named `test:unit`. You can execute your tests by running `npm run test:unit`
 
 ## Testing the `MatchupTitle` component
 
