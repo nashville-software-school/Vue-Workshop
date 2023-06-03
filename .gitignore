@@ -117,3 +117,5 @@ dist
 
 .vscode/
 .DS_Store
+
+.firebase/
