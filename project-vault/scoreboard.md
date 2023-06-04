@@ -7,7 +7,7 @@ For this project, create a scoreboard for two teams with `+` and `-` buttons and
 ## Part 1
 
 - Display a header saying Team 1 vs Team 2 (feel free to name these something else)
-- Below the header dislpay a score card for each team which displays the team's current score, along with a `+` and `-` button that increments and decrements the team's score. The score should not be allowed to go below zero
+- Below the header display a score card for each team which shows the team's current score, along with `+` and `-` buttons that increments and decrements the team's score. The score should not be allowed to go below zero
 
 ## Part 2
 
