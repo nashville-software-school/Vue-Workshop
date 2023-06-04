@@ -2,7 +2,7 @@
 
 For this project, create a spelling test that makes use of the webkit speech API. The user should be read 10 words and given a text input to try to spell each word. Afterwards they should be told how many words they spelled correctly.
 
-[**View a Demo**](https://nss-vue-spelling-test.web.app/)
+[**View a Demo**](https://nss-vue-spell-test.web.app)
 
 > **NOTE**: To get your browser to "speak"
 >
