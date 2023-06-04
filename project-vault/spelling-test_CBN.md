@@ -64,4 +64,4 @@ watch(
 
 #### Still Stuck?
 
-Try checking out the solution files [here](https://github.com/NSS-Vue-Workshop/Spelling-Test)
+Take a look at the demo code [here](https://github.com/nashville-software-school/Vue-Workshop/tree/main/projects/spelling-test)
