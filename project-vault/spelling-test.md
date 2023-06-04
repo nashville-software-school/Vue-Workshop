@@ -27,6 +27,18 @@ For this project, create a spelling test that makes use of the webkit speech API
 
 1. As the user is taking the test, show them how many questions they have remaining (e.g. "Word 4 of 10")
 
+## Part 4 (Optional)
+
+1. When the word changes, the new word should be immediately spoken without the user having to click the "Say Word" button. **HINT**: You can do this easily using the [watch](https://vuejs.org/guide/essentials/watchers.html) function from Vue. Example
+
+```js
+// watch takes 2 arguments that are both functions
+watch(
+  () => word, // this is a function that returns the thing we're watching
+  () => sayWord() // this is the function we want to run when it changes
+);
+```
+
 #### Stuck?
 
 Need help? Try the [Code by Numbers](./spelling-test_CBN.md)
