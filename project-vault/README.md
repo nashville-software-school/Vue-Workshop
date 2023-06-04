@@ -1,10 +1,10 @@
 # Project Vault
 
-🔥 = **Easy/Mild**
+🔥 = **Easy**
 
-🔥🔥 = **Moderate/Medium**
+🔥🔥 = **Moderate**
 
-🔥🔥🔥 = **Difficult/Hot**
+🔥🔥🔥 = **Difficult**
 
 ## Projects
 

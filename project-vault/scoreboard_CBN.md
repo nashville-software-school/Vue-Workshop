@@ -35,4 +35,4 @@ For this project, create a scoreboard for two teams with `+` and `-` buttons and
 
 #### Still Stuck?
 
-Try checking out the solution files [here](https://github.com/nashville-software-school/Vue-Workshop/tree/main/projects/scoreboard)
+You can see how I did it [here](https://github.com/nashville-software-school/Vue-Workshop/tree/main/projects/scoreboard)

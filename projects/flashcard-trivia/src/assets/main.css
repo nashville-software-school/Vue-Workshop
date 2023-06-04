@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Jedi';
+  src: url('@/assets/fonts/jedi/DeathStar-VmWB.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Distant Galaxy';
+  src: url('@/assets/fonts/galaxy/SfDistantGalaxy-0l3d.ttf') format('truetype');
+}
+
+html {
+  font-family: 'Jedi';
+  background: #242424;
+}
