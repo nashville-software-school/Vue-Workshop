@@ -49,4 +49,4 @@ For this project, build a memory matching game which has users flip over cards t
 
 #### Still Stuck?
 
-Try checking out the solution files [here](https://github.com/NSS-Vue-Workshop/matching-game)
+Take a look at the demo code [here](https://github.com/NSS-Vue-Workshop/matching-game)

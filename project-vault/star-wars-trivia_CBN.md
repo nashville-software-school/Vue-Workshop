@@ -41,4 +41,4 @@ For this project, create a set of flashcards which ask the user Star Wars trivia
 
 #### Still Stuck?
 
-You can see how I did it [here](https://github.com/nashville-software-school/Vue-Workshop/tree/main/projects/flashcard-trivia)
+Take a look at the demo code [here](https://github.com/nashville-software-school/Vue-Workshop/tree/main/projects/flashcard-trivia)
