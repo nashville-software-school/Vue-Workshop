@@ -2,7 +2,7 @@
 
 For this project, create a set of flashcards which ask the user Star Wars trivia (or some other topic if you'd rather).
 
-[**View a Demo**](https://nss-vue-trivia.web.app/)
+[**View a Demo**](https://nss-vue-star-wars-trivia.web.app/)
 
 ## Part 1
 
