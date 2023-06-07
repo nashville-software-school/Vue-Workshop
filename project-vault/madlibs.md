@@ -36,7 +36,3 @@ There is no Code-by-Numbers for this project so here are some tips to help you g
     <v-text-field v-model="template.answers[index]" />
   </div>
   ```
-
-#### Still Stuck?
-
-Try checking out the solution files [here](https://github.com/NSS-Vue-Workshop/Madlibs)

@@ -44,7 +44,3 @@ For this project, build an event dashboard that uses **Vuex** and the [SeatGeek 
 ## Part 6
 
 1. Recreate Step 5 for Theater events and Concerts
-
-#### Stuck?
-
-Try checking out the solution files [here](https://github.com/NSS-Vue-Workshop/Event-Dashboard)

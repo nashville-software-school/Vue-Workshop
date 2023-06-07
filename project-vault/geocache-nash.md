@@ -63,7 +63,3 @@ There is no Code-by-Numbers for this project so here are some tips to help you g
 - Decide if you want to use Vuex. It's not required and this application could be built without it. It would be recommended if you want more experience using it
 - Plan in advance how you'd like to structure your data in Firestore. It's recommend that you have a `geocaches` collection and each document has a `logs` subcollection
 - If your Leaflet markers are not showing on your map, try [this fix](https://vue2-leaflet.netlify.app/quickstart/#marker-icons-are-missing) in your `main.js` file
-
-#### Still Stuck?
-
-Try checking out the solution files [here](https://github.com/NSS-Vue-Workshop/Geo-Nash)
