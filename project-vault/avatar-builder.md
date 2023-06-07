@@ -2,9 +2,9 @@
 
 For this project, create a form for users to build their own avatar. To do this, use the [DiceBear](https://www.dicebear.com/styles/personas) service which allows you to customize an avatar image URL by adding certain query parameters to the URL. Here are some examples. Click into each and take a look at how the URL parameters are affecting the avatar image
 
-Base Avatar: https://api.dicebear.com/6.x/personas/svg
-w/ mohawk https://api.dicebear.com/6.x/personas/svg?hair=mohawk
-w/ mohawk and smirk https://api.dicebear.com/6.x/personas/svg?hair=mohawk&mouth=smirk
+- Base Avatar: https://api.dicebear.com/6.x/personas/svg
+- w/ mohawk https://api.dicebear.com/6.x/personas/svg?hair=mohawk
+- w/ mohawk and smirk https://api.dicebear.com/6.x/personas/svg?hair=mohawk&mouth=smirk
 
 The image URLs accept parameters for:
 
