@@ -37,3 +37,7 @@ Take a look at the documentation site to see all the URL parameters it will acce
 ## Part 2 (Optional)
 
 1. Add a download button below the image for the user to save the avatar
+
+#### Stuck?
+
+Need help? Try the [Code by Numbers](./avatar-builder_CBN.md)

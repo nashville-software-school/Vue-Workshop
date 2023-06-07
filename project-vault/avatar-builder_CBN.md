@@ -66,4 +66,8 @@ https://api.dicebear.com/6.x/personas/svg
 
 11. Inside the AvatarImage component import the `avatarUrl` variable from the store and bind it to the `src` of an `<img>` tag inside the template
 12. In the avatarStore update the logic inside `avatarUrl` so that it creates a dynamic url based on the values inside `avatarOptions`.
-13. Inside AvatarImage add a button underneath the image to trigger a download. You may need to google "how to "
+13. Inside AvatarImage add a button underneath the image to trigger a download. You may need to google _"how to download images using javascript"_
+
+#### Still Stuck?
+
+Take a look at the demo code [here](https://github.com/nashville-software-school/Vue-Workshop/tree/main/projects/avatar-builder)
