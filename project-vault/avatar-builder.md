@@ -1,4 +1,4 @@
-# Build a Matching Game
+# Create an Avatar Builder
 
 For this project, create a form for users to build their own avatar. To do this, use the [DiceBear](https://www.dicebear.com/styles/personas) service which allows you to customize an avatar image URL by adding certain query parameters to the URL. Here are some examples. Click into each and take a look at how the URL parameters are affecting the avatar image
 
