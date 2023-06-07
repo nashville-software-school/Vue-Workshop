@@ -24,7 +24,7 @@ Take a look at the documentation site to see all the URL parameters it will acce
 
 **HINTS & GOTCHAS**
 
-1. While it certainly not necessary to use a store for an application this small, try keeping the user's selections in a `avatarStore` file. In a larger application, something like a user avatar would be handy to have in a global store.
+1. While it's certainly not necessary to use a store for an application this small, try keeping the user's selections in a `avatarStore` file. In a larger application, something like a user avatar would be handy to have in a global store.
 1. For picking colors, you can use normal `<input>` elements with a `type="color"` attribute
 1. Be aware that color inputs will give you hex values with a `#` prefix e.g. `#ffffff` but when you use these hex values in your DiceBear URLs, it is does not want the `#` included. You'll want to remove that character in the URL e.g. `hairColor=ffffff`
 1. If you want to add facial hair to your avatar, I noticed that it's not enough to just supply the `facialHair` parameter to the URL. I can't tell if this was intended or not, but you'll also need to supply the `facialHairProbability` parameter and give it a value of 100. e.g. `facialHair=goatee&?facialHairProbability=100`
