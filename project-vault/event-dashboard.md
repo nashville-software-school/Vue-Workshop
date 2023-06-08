@@ -1,6 +1,6 @@
 # Build an Event Dashboard with the SeatGeek API
 
-For this project, build an event dashboard that uses **Vuex** and the [SeatGeek API](https://platform.seatgeek.com/) to receive data on theater, music, and sporting events in a given date range
+For this project, build an event dashboard that uses the [SeatGeek API](https://platform.seatgeek.com/) to receive data on theater, music, and sporting events in a given date range. Manage your state inside a store so it's easily shared across components.
 
 [**View a Demo**](https://nss-vue-event-dashboard.web.app/)
 
@@ -12,12 +12,12 @@ For this project, build an event dashboard that uses **Vuex** and the [SeatGeek 
 
 ## Part 1
 
-1. Add a Vuetify [datepicker](https://vuetifyjs.com/en/components/date-pickers/#range) to the screen that allows users to select a date range
+1. Add a form control to allow users to select a date range with a starting date and ending date. (**NOTE**: The calendar date picker in the demo application is using an older component library. If you would like to use PrimeVue to build this app, you might substitute this for just 2 date inputs)
 1. Add a header to the top of the screen with the title `Event Dashboard` (or whatever you'd like to call your app). Add a subheader that shows a nicely formatted version of the date range the user has selected. For example: `Sat Mar 13 - Sat Mar 27`
 
 ## Part 2
 
-1. As soon as the user selects or changes the date range, make a call to the SeatGeek API to get a list of all Sporting events that are happening in Nashville in the given date range. Display a tile/card above the datepicker that shows just the number of sporting events happening. Give the tile/card a header with the text "Sporting Events"
+1. As soon as the user selects or changes the date range, make a call to the SeatGeek API to get a list of all Sporting events that are happening in Nashville in the given date range. Display a tile/card above the date controls that shows just the number of sporting events happening. Give the tile/card a header with the text "Sporting Events"
 
 > **HINT**: The SeatGeek taxonomy name for sporting event is "sports"
 
