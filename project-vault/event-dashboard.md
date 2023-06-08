@@ -12,7 +12,7 @@ For this project, build an event dashboard that uses the [SeatGeek API](https://
 
 ## Part 1
 
-1. Add a form control to allow users to select a date range with a starting date and ending date. (**NOTE**: The calendar date picker in the demo application is using an older component library. If you would like to use PrimeVue to build this app, you might substitute this for just 2 date inputs)
+1. Add a form control to allow users to select a date range with a starting date and ending date. (**NOTE**: The calendar date picker in the demo application is from an older component library. If you would like to use PrimeVue to build this app, you might substitute this control for just 2 date inputs)
 1. Add a header to the top of the screen with the title `Event Dashboard` (or whatever you'd like to call your app). Add a subheader that shows a nicely formatted version of the date range the user has selected. For example: `Sat Mar 13 - Sat Mar 27`
 
 ## Part 2
