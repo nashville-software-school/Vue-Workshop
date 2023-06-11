@@ -40,3 +40,7 @@ https://api.open-meteo.com/v1/forecast?latitude=36.16&longitude=-86.78&current_w
 ### Part 3
 
 1. Give the user a 4th button labeled "Current Location". When clicked it should attempt to get the user's current location and fetch their weather. **HINT**: To get the user's current coordinates you can use the [getCurrentPosition](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) function
+
+## Stuck?
+
+Need help? Try the [Code by Numbers](./weather-component_CBN.md)
