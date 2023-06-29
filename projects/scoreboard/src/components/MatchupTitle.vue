@@ -4,9 +4,13 @@ const props = defineProps(['team1', 'team2'])
 
 <template>
   <h1>
-    <span :class="{ winning: team1.score > team2.score }">{{ props.team1.name }}</span>
-    <span>vs.</span>
-    <span :class="{ winning: team2.score > team1.score }">{{ props.team2.name }}</span>
+    <span class="team-1" :class="{ winning: team1.score > team2.score }">{{
+      props.team1.name
+    }}</span>
+    <span> vs. </span>
+    <span class="team-2" :class="{ winning: team2.score > team1.score }">{{
+      props.team2.name
+    }}</span>
   </h1>
 </template>
 

@@ -4,7 +4,7 @@ const emit = defineEmits(['increment', 'decrement'])
 </script>
 
 <template>
-  <div class="box">
+  <div class="box score-card">
     <p class="score">
       {{ props.score }}
     </p>
